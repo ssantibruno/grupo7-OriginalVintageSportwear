@@ -5,26 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Original Vintage Sportwear</title>
-    <link rel="stylesheet" href="static/css/styles.css">
-    <script src="https://kit.fontawesome.com/83973e8fe1.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <body>
     <header>
         <article class="contenedor01">
             <div class="logo">
-                <img src="static/img/logo-OVS.png" alt="Logo OVS">
+                <img src="./img/logo-OVS.png" alt="Logo OVS">
             </div>
-            <div class="título">
-                <h1>Original Vintage Sportwear</h1>
+            <div class="titulo">
+                <h3>Original Vintange Sportwear</h3>
             </div>
+
+            <div class="busqueda">
+                <form action="#" method="GET">
+                    <input type="text" value="Busquemos">
+                    <div class="lupa">
+                    <i class="fa fa-search" color="black"></i>
+                    </div>
+                </form>
+            </div>
+        
             <div class="nav-bar">
-                <ul>
-                    <li><a href="#">Buscar producto</a></li>
-                    <li><a href="#">Ingresar</a></li> 
-                    <li><a href="#">Comprar</a></li>
+                <ul class="navegador2">
+                    <li><a href="./register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+                    <li><a href="./login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href=#Miscompras>Mis compras <i class="fas fa-shopping-basket"></i></a></li>
                 </ul>
             </div>
         </article>
+        <br>
         <article class="contenedor02">
             <div class="nav-bar-tipos">
                 <ul>
@@ -35,6 +48,8 @@
             </div>
         </article>
     </header>
+
+
     <main>
         <div class="carrusel">
             <img src="static/img/maradona.jpg" alt="maradona">
