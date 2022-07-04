@@ -204,14 +204,54 @@ h3 {
 footer{
     width: 100%;
     background-color: #ebebeb;
-    margin-bottom: 0px;
-        order: 1;
+    margin: 0px;
+    }
+
+.Categorias, .Contactos, .redes, .formas-de-pago{
+    padding: 15px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: left;
+
 }
 
+footer div ul li{
+    list-style: none;
+    padding-left: 30px;
+    font-size: 15px;
+    text-decoration: none;
+    }
+
+.Categorias ul li a{
+    color: black;
+    list-style: none;
+    text-decoration: none;
+    }
  
+.Contactos ul li i{
+    color:rgb(199, 115, 6);
+    font-size: 20px;
+}
+
+.iconos-redes {
+    display: flex;
+    margin: 2px;
+    }
+
+.iconos-redes li i{
+    color:rgb(199, 115, 6);
+    font-size: 30px;
+}
+
+.tarjetas-forma-de-pago img{
+    margin:2px;
+}
+
 .copyright{
     background-color: #666;
     width: 100%;
+    padding: 0px 15px;
 }
 
 /************FORM********************/
