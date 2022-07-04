@@ -157,3 +157,54 @@ footer{
     background-color: #666;
     width: 100%;
 }
+
+/************FORM********************/
+
+.create-form {
+    padding: 20px 15px;
+    background-color: rgb(85, 83, 83);
+
+}
+
+.form-bienvenido {
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.items-form {
+    margin-bottom: 15px;
+}
+
+.items-form label {
+    margin-bottom: 5px;
+    font-style: italic;
+    display: block;
+    color: white;
+}
+
+.input {
+    width: 100%;
+    padding: 7px;
+
+}
+
+.button {
+    background-color: #000000;
+    color: #ebebeb;
+    border-radius: 5px;
+    padding: 2px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.olvide-contraseña,.usuario-nuevo {
+    padding: 7px;
+}
+
+.olvide-contraseña a,.usuario-nuevo a {
+    color: rgb(21, 127, 194);
+}
