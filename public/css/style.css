@@ -25,9 +25,11 @@ header{
 }
 
 .logo {
+    display: flex;
     padding: 0px;
     margin-top: 0;
-    width: 25%;
+    width: 60%;
+    box-sizing: border-box;
     }
 
 .logo img{
@@ -38,64 +40,89 @@ header{
 .titulo{
     color: rgb(231, 228, 21);
     font-weight: bold;
+    font-size: 30px;
     text-align: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 25%;
+    width: 15%;
     
 }
-.busqueda{
-    width: 30%;
-    text-align: center;
-    align-items: flex-center;
+.titulo{
+    display: none;
 }
 
-header article div form input{
-    color: #666;
-    padding: 2px;
-    width: 80%;
-    font-size: 12px;
-    border-radius: 10%;
-    border: #ebebeb 1px;
+.busqueda{
+    display: flex;
+    width: 40%;
+    text-align: center;
+    align-items: flex-center;
+    padding: 0px 15px 15px 15px;
 }
-.lupa{
-    font-size: 12px;
-    background-color: #ebebeb;
-    border: 1px solid #000;
-    width: 10%;
+
+.barra-busqueda{
+    background-color: white;
+    display: block;
+    width: 100%;
+
+}
+
+.caja-barra-lupa{
+    height: 30px;
+    border-radius: 15%;
+    color: #ffff;
+    width: 100%;
+    font-size: 18px;
+    position: relative;
+    }
+.input-busqueda{
+    width: 100%;
+    border: none;
+    height: 30px;
+    padding: 5px;
+}
+
+
+.boton-lupa{
+    position: absolute;
+    top:5px;
+    right: 5px;
+    font-size: 18px;
+    background-color: white;
     display: inline;
+    color:black;
+    box-sizing: border-box;
+    border: none;
 }
+
+
 
 
 .nav-bar{
     display: flex;
     width: 20%;
-    padding: 0;
-    margin: 0;
-}
-.nav-bar ul li a{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
     align-items: center;
-    color: rgb(231, 228, 21);
-    list-style: none;
-    font-size: 12px;
-    margin: 4px;
-    font-weight:bold ;
-    text-decoration: none;
+    justify-content: center;
 }
-.navegador2{
+.register, .login, .carrito{
     display: flex;
-    justify-content: end;
+   align-items: center;
+   justify-content: center;
+   color: rgb(231, 228, 21);
+   font-size: 16px;
+   text-align: center;
 }
 
+.nav-bar div a{
+    color: rgb(231, 228, 21);
+    font-size: 30px;
+    text-decoration: none;
+    padding-right: 10px;
+}
 
 
 .contenedor02{
     
     display: flex;
     width: 100%;
-    border-top: rgb(211, 207, 7) 1px solid;
 }
 
 .nav-bar-tipos {
@@ -103,6 +130,8 @@ header article div form input{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 5px 0px;
+    border-top: rgb(211, 207, 7) 1px solid;
 
 }
 .nav-bar-tipos ul {
@@ -118,24 +147,84 @@ header article div form input{
     align-items: center;
     list-style: none;
     color: white;
-    font-size: 10px;
+    font-size: 16px;
     margin: 2px;
-    padding: 2px;
+    padding: 5px;
     text-align: center;
     width: 25%;
+    
 }
 
 .nav-bar-tipos ul li a{
-    color: rgb(231, 238, 240);
     justify-content: center;
     align-items: center;
     text-align: center;
+    color:rgb(231, 228, 21);
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.contenedor02{
+    display: none;
+}
+
+div.burger-menu{
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger-menu i{
+    background-color:black;
+    color: rgb(231, 228, 21);
+    font-size: 30px;
+    margin: 10px 0px 10px 0px;
+    padding:10px;
+    border:none;
+    height: 40px;
+    height: 40px;
+}
+
+.register, .login{
+    display: none;
+}
+.carrito p{
+    display: none;
+}
+
+.busqueda{
+    order:5;
+    width: 100%;
+    position: relative;
+}
+
+@media (min-width:371px){
+    .titulo{
+        display: inline;
+        font-size: 18px;
+    }
+    .contenedor02{
+        display: inline;
+    }
+}
+
+@media (min-width:767px){
+    .titulo{
+        display: inline;
+        font-size: 26px;
+    }
+    .contenedor02{
+        display: inline;
+    }
+}
+
+
 
 /***************MAIN**********************/
 
 main{
-    margin-top: 125.30px;
+    margin-top: 262px;
     background-color: rgb(194, 194, 194);
     width: 100%;
 }
@@ -149,7 +238,8 @@ main h3{
     height: 130px;
     background-color: #ebebeb;
     border-radius: 1px solid black;
-    margin: 5px;
+    display: flex;
+    justify-content: center;
 }
 .nuevos-ingresos, .destacados{
     margin: 10px;
@@ -160,13 +250,16 @@ h3 {
     border-bottom: 2px solid black;
 }
 
+.articulos-nuevos, .articulos-destacados{
+    margin-top: 15px;
+}
 
 
 
 .articulo{
     background-color: white;
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     border: solid 1px #3b3939 ;
     box-shadow: 2px 2px 5px black;
 }
