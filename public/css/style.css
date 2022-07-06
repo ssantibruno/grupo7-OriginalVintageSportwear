@@ -115,7 +115,6 @@ header{
     color: rgb(231, 228, 21);
     font-size: 30px;
     text-decoration: none;
-    padding-right: 10px;
 }
 
 
@@ -168,7 +167,7 @@ header{
     display: none;
 }
 
-div.burger-menu{
+.burger-menu{
     display: flex;
     width: 20%;
     align-items: center;
@@ -198,28 +197,9 @@ div.burger-menu{
     width: 100%;
     position: relative;
 }
-
-@media (min-width:371px){
-    .titulo{
-        display: inline;
-        font-size: 18px;
-    }
-    .contenedor02{
-        display: inline;
-    }
+.busqueda2{
+    display: none;
 }
-
-@media (min-width:767px){
-    .titulo{
-        display: inline;
-        font-size: 26px;
-    }
-    .contenedor02{
-        display: inline;
-    }
-}
-
-
 
 /***************MAIN**********************/
 
@@ -403,6 +383,185 @@ footer div ul li{
     width: 100%;
     padding: 5px 15px;
 }
+
+
+/******************** tablet Header *********************/
+@media (min-width:371px){
+    .burger-menu{
+        display: none;
+    }
+    .busqueda{
+        display: none;
+    }.
+    .contenedor01{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 10px;
+    }
+    .logo{
+        order:1;
+        width:20%;
+        padding-top:10px;
+    }
+    .titulo{
+        order:2;
+        display: inline;
+        font-size: 18px;
+        width: 15%;
+    }
+    .busqueda2{
+        display: inline;
+        order:3;
+        width:35%;
+    }
+    .register, .login{
+        display: inline;
+    }
+    .carrito p{
+        display: inline;
+    }
+    .nav-bar{
+        display: flex;
+        order:4;
+        width: 30%;
+    }
+    .nav-bar div a, .nav-bar div p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .register, .login, .carrito{
+        display: flex;
+       flex-direction: column;
+        align-items: center;
+       justify-content: center;
+       color: rgb(231, 228, 21);
+       font-size: 12px;
+       text-align: center;
+       padding: 10px;
+       line-height: 20px;
+    }
+    .contenedor02{
+        display: inline;
+    }
+    main{
+        margin-top: 210.62px;
+        background-color: rgb(194, 194, 194);
+        width: 100%;
+    }
+/************tablet articulos**********/
+    .articulos-nuevos, .articulos-destacados{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .articulo{
+        width: 47%;
+    }
+
+/**************tablet  newsletter **************/
+.newsletter{
+    background-color: rgb(44, 39, 39);
+    color: white;
+    margin: 5px;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    line-height: 45px;
+    font-size: 30px;
+}
+/***************tablet footer********************/
+.caja-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.Categorias, .Contactos, .redes, .formas-de-pago{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.copyright{
+    font-size:12px ;
+}
+
+}
+
+/********************portatil ********************/
+
+@media (min-width:769px){
+    .titulo{
+        display: inline;
+        font-size: 26px;
+    }
+    .busqueda2{
+        display: inline;
+        order:3;
+        width:35%;
+    }
+    .busqueda2 form div input{
+        width: 100%;
+        border: none;
+        height: 50px;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .busqueda2 form div button{
+        position: absolute;
+        top:10px;
+        right:10px;
+        font-size: 30px;
+        background-color: white;
+        display: inline;
+        color:black;
+        box-sizing: border-box;
+        border: none;
+        }
+
+    .register, .login, .carrito{
+        display: flex;
+       flex-direction: column;
+        align-items: center;
+       justify-content: center;
+       color: rgb(231, 228, 21);
+       font-size: 16px;
+       text-align: center;
+       padding: 10px;
+       line-height: 30px;
+    }
+    .nav-bar div a i{
+        font-size: 50px;
+    }
+
+    .contenedor02{
+        display: inline;
+    }
+    .nav-bar-tipos ul li a{
+        font-size: 22px;
+    }
+
+
+    main{
+        margin-top: 269px;
+        background-color: rgb(194, 194, 194);
+        width: 100%;
+    }   
+/****************portatil  articulo****/
+.articulos-nuevos, .articulos-destacados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+}
+.articulo{
+    width: 23%;
+}
+}
+
 
 /************FORM********************/
 
