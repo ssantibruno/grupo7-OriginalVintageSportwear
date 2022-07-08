@@ -30,6 +30,8 @@ header{
     margin-top: 0;
     width: 60%;
     box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
     }
 
 .logo img{
@@ -204,7 +206,7 @@ header{
 /***************MAIN**********************/
 
 main{
-    margin-top: 262px;
+    margin-top: 199px;
     background-color: rgb(194, 194, 194);
     width: 100%;
 }
@@ -224,7 +226,7 @@ main h3{
 
 .banner{
     width: 100%;
-    height: 300px;
+    height: 140px;
     animation: banner 10s infinite linear alternate;
     background-size: 100% 100%;
     position: relative;
@@ -403,6 +405,9 @@ footer div ul li{
         order:1;
         width:20%;
         padding-top:10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .titulo{
         order:2;
@@ -446,9 +451,13 @@ footer div ul li{
         display: inline;
     }
     main{
-        margin-top: 210.62px;
+        margin-top: 207px;
         background-color: rgb(194, 194, 194);
         width: 100%;
+    }
+
+    .banner{
+        height: 300px;
     }
 /************tablet articulos**********/
     .articulos-nuevos, .articulos-destacados{
@@ -545,10 +554,13 @@ footer div ul li{
 
 
     main{
-        margin-top: 269px;
+        margin-top: 214.69px;
         background-color: rgb(194, 194, 194);
         width: 100%;
     }   
+    .banner{
+        height: 500px;
+    }
 /****************portatil  articulo****/
 .articulos-nuevos, .articulos-destacados{
     display: flex;
