@@ -15,6 +15,8 @@ app.get('/Resto-del-mundo', (req, res) => res.sendFile(path.resolve(__dirname + 
 app.get('/Equipos-Americanos', (req, res) => res.sendFile(path.resolve(__dirname + '/views/Equipos-Americanos.html'))); 
 app.get('/Equipos-Europeos', (req, res) => res.sendFile(path.resolve(__dirname + '/views/Equipos-Europeos.html'))); 
 app.get('/index', (req, res) => res.sendFile(path.resolve(__dirname + '/views/index.html'))); 
+app.get('/productCar', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productCar.html'))); 
+app.get('/productDetail', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productDetail.html'))); 
 
 app.listen(3000, ()=>{   console.log('Servidor esta corriendo');
 });
