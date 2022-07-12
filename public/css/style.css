@@ -1,4 +1,5 @@
-*{ margin: 0px;
+*{ 
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
@@ -40,11 +41,11 @@ header{
 }
 
 .titulo{
-    color: rgb(231, 228, 21);
+    color: rgb(202, 200, 80);
     font-weight: bold;
     font-size: 30px;
     text-align: left;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Kdam Thmor Pro', sans-serif;
     width: 15%;
     
 }
@@ -108,20 +109,24 @@ header{
     display: flex;
    align-items: center;
    justify-content: center;
-   color: rgb(231, 228, 21);
+   color: rgb(202, 200, 80);
    font-size: 16px;
    text-align: center;
 }
 
 .nav-bar div a{
-    color: rgb(231, 228, 21);
-    font-size: 30px;
+    color: rgb(202, 200, 80);
+    font-size: 15px;
     text-decoration: none;
+}
+
+.nav-bar div:hover a{
+    color: rgb(199, 115, 6) ;
+    transition: all 0.3s;
 }
 
 
 .contenedor02{
-    
     display: flex;
     width: 100%;
 }
@@ -132,9 +137,9 @@ header{
     align-items: center;
     width: 100%;
     padding: 5px 0px;
-    border-top: rgb(211, 207, 7) 1px solid;
-
+    border-top: rgb(202, 200, 80) 1px solid;
 }
+
 .nav-bar-tipos ul {
     display: flex;
     justify-content: space-between;
@@ -143,7 +148,8 @@ header{
 }
 
 .nav-bar-tipos ul li{
-    display: flex;
+    position: relative;
+    display: block;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -153,16 +159,43 @@ header{
     padding: 5px;
     text-align: center;
     width: 25%;
+    float: left;
     
 }
 
-.nav-bar-tipos ul li a{
+.nav-bar-tipos > ul > li > a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    color:rgb(231, 228, 21);
+    color:rgb(202, 200, 80);
     text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-bar-tipos > ul > li > a:hover{
+    color: rgb(199, 115, 6);
+}
+
+.sub-menu-seleccion{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    
+}
+
+.sub-menu-seleccion li{
+    display: none;
+}
+
+.sub-menu-seleccion li a{
+    text-decoration: none;
+    color: rgb(202, 200, 80);
+}
+
+.sub-menu-seleccion li a:hover{
+    color: rgb(199, 115, 6);
+    transition: all 0.3s;
 }
 
 .contenedor02{
@@ -178,7 +211,7 @@ header{
 
 .burger-menu i{
     background-color:black;
-    color: rgb(231, 228, 21);
+    color: rgb(202, 200, 80);
     font-size: 30px;
     margin: 10px 0px 10px 0px;
     padding:10px;
@@ -216,13 +249,6 @@ main h3{
     text-align: center;
     font-size: 18px;
     }
-/* .banner{
-    height: 130px;
-    background-color: #ebebeb;
-    border-radius: 1px solid black;
-    display: flex;
-    justify-content: center;
-} */
 
 .banner{
     width: 100%;
@@ -239,12 +265,15 @@ main h3{
     0%, 20%{
         background-image: url(../img/banner.jpg);
     }
+
     25%, 45%{
         background-image: url(../img/banner2.jpg);
     }
+    
     50%, 70%{
         background-image: url(../img/banner3.jpg);
     }
+
     75%, 100%{
         background-image: url(../img/banner4.jpg);
     }
@@ -266,17 +295,12 @@ main h3{
     text-align: center;
 }
 
-.info h1{
-    color: rgb(207, 227, 81);
-    font-size: 45px;
-    margin-bottom: 20px;
-    text-shadow: 10px 10px 600px rgb(202, 212, 165);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
 .info p{
     color: rgb(197, 204, 134);
     font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    
 }
 
 .nuevos-ingresos, .destacados{
@@ -394,7 +418,8 @@ footer div ul li{
     }
     .busqueda{
         display: none;
-    }.
+    }
+
     .contenedor01{
         display: flex;
         align-items: center;
@@ -441,7 +466,7 @@ footer div ul li{
        flex-direction: column;
         align-items: center;
        justify-content: center;
-       color: rgb(231, 228, 21);
+       color: rgb(202, 200, 80);
        font-size: 12px;
        text-align: center;
        padding: 10px;
@@ -535,7 +560,7 @@ footer div ul li{
        flex-direction: column;
         align-items: center;
        justify-content: center;
-       color: rgb(231, 228, 21);
+       color: rgb(202, 200, 80);
        font-size: 16px;
        text-align: center;
        padding: 10px;
@@ -695,4 +720,18 @@ form{
     border: none;
     padding: 10px;
     border-radius: 10px;
+}
+
+/******************* ProductCar **************/
+
+.contenedor-shop-car{
+
+}
+
+.title-car{
+   
+}
+
+h1{
+
 }
