@@ -24,3 +24,8 @@ https://mezzalacamisetas.com.ar/retro/
 https://thefutbolstore.com.ar/
 https://www.rb-jerseys.com/
 https://vintagefootball.shop/
+
+
+Enlace de Trello:
+
+https://trello.com/b/7GtLuiQE/proyecto-integrador
