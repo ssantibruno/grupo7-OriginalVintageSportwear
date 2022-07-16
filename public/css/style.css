@@ -58,13 +58,15 @@ header{
     width: 40%;
     text-align: center;
     align-items: flex-center;
-    padding: 0px 15px 15px 15px;
+    padding: 0px 10px 10px 10px;
+   
 }
 
 .barra-busqueda{
     background-color: white;
     display: block;
     width: 100%;
+    border-radius: 20px;
 
 }
 
@@ -174,28 +176,6 @@ header{
 
 .nav-bar-tipos > ul > li > a:hover{
     color: rgb(199, 115, 6);
-}
-
-.sub-menu-seleccion{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    
-}
-
-.sub-menu-seleccion li{
-    display: none;
-}
-
-.sub-menu-seleccion li a{
-    text-decoration: none;
-    color: rgb(202, 200, 80);
-}
-
-.sub-menu-seleccion li a:hover{
-    color: rgb(199, 115, 6);
-    transition: all 0.3s;
 }
 
 .contenedor02{
@@ -443,7 +423,27 @@ footer div ul li{
     .busqueda2{
         display: inline;
         order:3;
-        width:35%;
+        width:35%;    
+        position: relative;
+    }
+
+    .busqueda2 input{
+        width: 100%;
+        border: none;
+        height: 50px;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+    .busqueda2 .button-lupa button{
+        position: absolute;
+        top:10px;
+        right:10px;
+        font-size: 30px;
+        background-color: white;
+        color:black;
+        border: none;
+        }
     }
     .register, .login{
         display: inline;
@@ -522,7 +522,6 @@ footer div ul li{
     font-size:12px ;
 }
 
-}
 
 /********************portatil ********************/
 
@@ -534,24 +533,25 @@ footer div ul li{
     .busqueda2{
         display: inline;
         order:3;
-        width:35%;
+        width:35%;    
+        position: relative;
     }
-    .busqueda2 form div input{
+
+    .busqueda2 input{
         width: 100%;
         border: none;
         height: 50px;
         padding: 10px;
         font-size: 20px;
+        border-radius: 20px;
     }
-    .busqueda2 form div button{
+    .busqueda2 .button-lupa button{
         position: absolute;
         top:10px;
         right:10px;
         font-size: 30px;
         background-color: white;
-        display: inline;
         color:black;
-        box-sizing: border-box;
         border: none;
         }
 
