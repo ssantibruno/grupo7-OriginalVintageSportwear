@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include ('./partials/head') %>
+
+    <body>
+        <%- include ('./partials/header') %>
+    
+    <main>
+        <form action="/" method="POST" class="form-registro">
+            <div>
+                <h2>Crea tu cuenta</h2>
+            </div>
+            <div class="control-registro">
+                <input type="text" name="user" placeholder="Nombre de usuario">
+            </div>
+            <div class="control-registro">
+                <input type="email" name="email" placeholder="E-mail">
+            </div>
+            <div class="control-registro">
+                <input type="text" name="name" placeholder="Nombre y apellido">
+            </div>
+            <div class="control-registro">
+                <input type="text" name="addres" placeholder="Domicilio">
+            </div>
+            <div>
+                <label for="birth_date"><b>Fecha de nacimiento</b></label>
+                <input type="date" name="birth_date" id="birth_date">
+            </div>
+            <div class="contraseña">
+                <input type="password" name="pass" placeholder="Contraseña">
+            </div>
+            <div class="contraseña">
+                <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
+            </div> 
+            <div>
+                <h4>Quieres recibir ofertas a tu correo?</h4>
+            </div>   
+            <div class="notifiaciones">
+                <input type="radio" name="notifiaciones" value="Si">
+                <label>Si</label>
+                <input type="radio" name="notifiaciones" value="No">
+                <label>No</label>
+            </div>
+            <div class="terminos">
+                <p>Estoy de acuerdo con <a href="#">Términos y Condiciones</a></p>
+            </div>
+            <div class="registrarse">
+                <button type="submit">Registrarse</button>
+            </div>    
+            <div class="registrado">
+                <p><a href="#">Ya estoy registrado</a></p>
+            </div>    
+        </form>
+    </main>
+
+    <%- include ('./partials/footer') %>
+
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include ('./partials/head') %>
+
+    <body>
+        <%- include ('./partials/header') %>
+    
+    <main>
+        <div class="contenedor-shop-cart">
+            <div class="title-car">
+                <h1>Carrito de Compras</h1>
+            </div>
+            <div class="cajaCompra">
+            <div class="productoCarrito">
+                <div class="imgCarrito">
+                    <img src="./img/camiseta-argentina.jpg" height="70px" width="70px">
+                </div>
+                <div class="nombreCarrito">
+                    <h4>Camiseta Seleccion Argentina</h4>
+                </div>
+                <div class="cantidadCarrito">
+                    <h4> - 1 +</h4>
+                </div>
+                <div class="unidadPrecioCarrito">
+                    <h4>$9900.00</h4>
+                </div>
+                <div class="totalPrecioCarrito">
+                    <h4>$9900.00</h4>
+                </div>
+                <div class="borrarCarrito">
+                    <button type="reset" value="borrar">X</button>
+                </div>
+            </div>
+            <div class="totalesCarrito">
+                <div class="subtotalCarrito">
+                    <h4>Subtotal </h4>
+                    <h4>$ 9900.00</h4>
+                </div>
+                <div class="totalCarrito">
+                    <h4>TOTAL</h4>
+                    <h4>$ 9900.00</h4>
+                </div>
+                <div class="iniciarCompra">
+                    <button type="submit" value="comprar">Iniciar Compra</button>
+                </div>
+                <div class="continuarCompra">
+                    <h4>Continuar comprando</h4>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+
+        <%- include ('./partials/footer') %>
+
+</body>
+
+</html>

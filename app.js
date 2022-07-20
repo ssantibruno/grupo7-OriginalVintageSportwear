@@ -1,9 +1,13 @@
 const express = require('express');
-const path = require('path')
-
+const path = require('path');
 const app = express(); 
+const mainRoutes=require("./routes/mainRoutes");
 
 app.use( express.static('public'));
+app.set('view engine','ejs');
+
+app.use('/', mainRoutes);
+app.use('/index', mainRoutes); 
 
 app.get('/', (req, res) => res.sendFile(path.resolve(__dirname + '/views/index.html')));
 app.get('/product', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productDetail.html')));
