@@ -62,7 +62,11 @@ header{
    
 }
 
+.busqueda{
+    width: 100%;
+}
 .barra-busqueda{
+    box-sizing: border-box;
     background-color: white;
     display: block;
     width: 100%;
@@ -71,6 +75,9 @@ header{
 }
 
 .caja-barra-lupa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 30px;
     border-radius: 15%;
     color: #ffff;
@@ -78,6 +85,7 @@ header{
     font-size: 18px;
     position: relative;
     }
+
 .input-busqueda{
     width: 100%;
     border: none;
@@ -98,9 +106,6 @@ header{
     border: none;
 }
 
-
-
-
 .nav-bar{
     display: flex;
     width: 20%;
@@ -108,13 +113,19 @@ header{
     justify-content: center;
 }
 .register, .login, .carrito{
-    display: flex;
    align-items: center;
    justify-content: center;
    color: rgb(202, 200, 80);
-   font-size: 16px;
+   font-size: 20px;
    text-align: center;
 }
+.register , .login {
+    display: none;
+    }
+.carrito a i{
+    font-size: 25px;
+}
+
 
 .nav-bar div a{
     color: rgb(202, 200, 80);
@@ -131,6 +142,10 @@ header{
 .contenedor02{
     display: flex;
     width: 100%;
+}
+
+.contenedor02{
+    display: none;
 }
 
 .nav-bar-tipos {
@@ -634,7 +649,121 @@ form{
     color: black;
 }
 
+    main{
+        margin-top: 207px;
+        background-color: rgb(194, 194, 194);
+        width: 100%;
+    }
 
+    .banner{
+        height: 300px;
+    }
+/************tablet articulos**********/
+    .articulos-nuevos, .articulos-destacados{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .articulo{
+        width: 47%;
+    }
+
+/**************tablet  newsletter **************/
+.newsletter{
+    background-color: rgb(44, 39, 39);
+    color: white;
+    margin: 5px;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    line-height: 45px;
+    font-size: 30px;
+}
+/***************tablet footer********************/
+.caja-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.Categorias, .Contactos, .redes, .formas-de-pago{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.copyright{
+    font-size:12px ;
+}
+
+/***************************productCar*********************/
+
+.title-car{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.cajaCompra{
+    display:flex;
+    padding:20px;
+}
+.productoCarrito{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    height: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.imgCarrito{
+    width:15%
+}
+.nombreCarrito{
+    width: 40%;
+}
+.cantidadCarrito{
+    width: 10%;
+}
+.unidadPrecioCarrito{
+    width: 15%;
+}
+.totalPrecioCarrito{
+    width: 15%;
+}
+.borrarCarrito{
+    width: 5%;
+}
+
+
+
+.totalesCarrito{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: #3b3939;
+}
+
+.subtotalCarrito, .totalCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    height: 40px;
+}
+
+.subtotalCarrito{
+    border-bottom: 1px solid #ebebeb;
+}
+
+.iniciarCompra, .continuarCompra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
 
 
 /******************** tablet Header *********************/
@@ -642,6 +771,34 @@ form{
     .burger-menu{
         display: none;
     }
+
+    .register, .login{
+        display: inline;
+    }
+    .carrito p{
+        display: inline;
+    }
+        .nav-bar{
+            display: flex;
+            order:4;
+            width: 30%;
+        }
+        .nav-bar div a, .nav-bar div p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .register, .login, .carrito{
+            display: flex;
+           flex-direction: column;
+            align-items: center;
+           justify-content: center;
+           color: rgb(202, 200, 80);
+           font-size: 20px;
+           text-align: center;
+           padding: 10px;
+           line-height: 20px;
+        }
 
     .sub-menu-seleccion{
         display: none;
@@ -696,86 +853,13 @@ form{
         color:black;
         border: none;
         }
-    }
-    .register, .login{
-        display: inline;
-    }
-    .carrito p{
-        display: inline;
-    }
-    .nav-bar{
-        display: flex;
-        order:4;
-        width: 30%;
-    }
-    .nav-bar div a, .nav-bar div p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .register, .login, .carrito{
-        display: flex;
-       flex-direction: column;
-        align-items: center;
-       justify-content: center;
-       color: rgb(202, 200, 80);
-       font-size: 12px;
-       text-align: center;
-       padding: 10px;
-       line-height: 20px;
-    }
-    .contenedor02{
-        display: inline;
-    }
-    main{
-        margin-top: 207px;
-        background-color: rgb(194, 194, 194);
-        width: 100%;
+        .contenedor02{
+            display: inline;
+        }
     }
 
-    .banner{
-        height: 300px;
-    }
-/************tablet articulos**********/
-    .articulos-nuevos, .articulos-destacados{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    .articulo{
-        width: 47%;
-    }
 
-/**************tablet  newsletter **************/
-.newsletter{
-    background-color: rgb(44, 39, 39);
-    color: white;
-    margin: 5px;
-    padding: 30px;
-    width: 100%;
-    text-align: center;
-    line-height: 45px;
-    font-size: 30px;
-}
-/***************tablet footer********************/
-.caja-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.Categorias, .Contactos, .redes, .formas-de-pago{
-    width: 50%;
-    box-sizing: border-box;
-}
-
-.copyright{
-    font-size:12px ;
-}
-
-
-/********************portatil ********************/
+/*********************portatil ********************/
 
 @media (min-width:769px){
     .titulo{
