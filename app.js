@@ -8,8 +8,9 @@ app.set('view engine','ejs');
 
 app.use('/', mainRoutes);
 app.use('/index', mainRoutes); 
+app.use('/register', mainRoutes);
 
-app.get('/', (req, res) => res.sendFile(path.resolve(__dirname + '/views/index.html')));
+
 app.get('/product', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productDetail.html')));
 app.get('/car', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productCar.html')));
 app.get('/register', (req, res) => res.sendFile(path.resolve(__dirname + '/views/register.html')));
