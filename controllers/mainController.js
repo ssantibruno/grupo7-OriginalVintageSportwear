@@ -6,7 +6,7 @@ const mainController={
     login: (req,res) => {
         res.render('./users/login.ejs')},
     selecciones: (req,res) => {
-        res.render('./products/product.ejs')}, 
+        res.render('./products/selecciones.ejs')}, 
     restoDelMundo: (req,res) => {
         res.render('./products/restoDelMundo.ejs')},     
     equiposAmericanos: (req,res) => {
