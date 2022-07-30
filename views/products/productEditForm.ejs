@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include ('../partials/head') %>
+
+    <body>
+        <%- include ('../partials/header') %>
+    
+    <main>
+        <form action="/" method="POST" class="form-registro">
+            <div class="divCreateProduct">
+                <div>
+                    <h2 class="createProductTitle">Editar Producto</h2>
+                </div>
+                <div class="control-registro">
+                    <label for="name" class="form-label">Nombre del producto:</label>
+                    <input type="text" name="product_name" placeholder="Editar Nombre de Producto">
+                </div>
+                <div class="control-registro">
+                    <label for="price" class="form-label">Precio del producto:</label>
+                    <input type="text" name="product_price" placeholder="Editar Precio de Producto">
+                </div>
+                <div class="control-registro">
+                    <label for="size" class="form-label">Talle del producto:</label>
+                    <input type="text" name="product_size" placeholder="Talle del Producto">
+                </div>
+                <div class="control-registro">
+                    <label for="status" class="form-label">Status del producto:</label>
+                    <div class="seleccion-status">
+                        <select>
+                            <option value="Disponible">Disponible</option>
+                            <option value="Agotado">Agotado</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-registro">
+                    <label for="img" class="form-label">Imagen del producto:</label>
+                    <input type="file" accept="image/png, image/jpg, image/jpeg" name="product_img" class="product_imageFile">
+                </div>
+                <div class="control-registro">
+                    <input type="submit" name="addProductButton" class="addProductButton" value="Editar Producto">
+                </div>
+            </div>
+            
+            
+        </form>
+    </main>
+
+</body>
+
+</html>
