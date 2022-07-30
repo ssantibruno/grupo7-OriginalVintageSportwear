@@ -2,6 +2,7 @@ const mainController={
     index: (req,res) => {
         res.render('index')},
     register: (req,res) =>{
+
         res.render('./users/register.ejs')},
     login: (req,res) => {
         res.render('./users/login.ejs')},
@@ -21,6 +22,7 @@ const mainController={
         res.render('./products/productCreateForm.ejs')},
     productEditForm: (req,res) => {
         res.render('./products/productEditForm.ejs')}, 
-}
 
-module.exports = mainController;
+
+}
+ module.exports = mainController;
