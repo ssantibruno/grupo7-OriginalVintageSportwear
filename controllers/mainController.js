@@ -17,7 +17,7 @@ const mainController={
     productCar: (req,res) => {
         res.render('./users/productCar.ejs')},
     productDetail: (req,res) => {
-        res.render('./users/productDetail.ejs')},  
+        res.render('./products/productDetail.ejs')},  
     productCreateForm: (req,res) => {
         res.render('./products/productCreateForm.ejs')},
     productEditForm: (req,res) => {
