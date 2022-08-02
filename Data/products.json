@@ -9,6 +9,18 @@
     "type": "destacado",
     "seleccion-status": "disponible",
     "condicion": "nueva"
+  },
+  {
+    "id": 2,
+    "product_name": "Café Origen Tolima",
+    "description": "rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras",
+    "product_price": 4259,
+    "category": "Equipos-Europeos",
+    "product_size":"L",
+    "image": "PRODUCTS-golden-monkey.jpg",
+    "type": "destacado",
+    "seleccion-status": "disponible",
+    "condicion": "nueva"
   }
  ]
 
