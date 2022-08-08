@@ -11,14 +11,14 @@ app.use('/index', mainRoutes);
 app.use('/register', mainRoutes);
 
 
-app.get('/product', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productDetail.html')));
-app.get('/car', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productCar.html')));
-app.get('/register', (req, res) => res.sendFile(path.resolve(__dirname + '/views/register.html')));
-app.get('/login', (req, res) => res.sendFile(path.resolve(__dirname + '/views/login.html'))); 
-app.get('/Selecciones', (req, res) => res.sendFile(path.resolve(__dirname + '/views/Selecciones.html')));
-app.get('/Resto-del-mundo', (req, res) => res.sendFile(path.resolve(__dirname + '/views/Resto-del-mundo.html'))); 
-app.get('/Equipos-Americanos', (req, res) => res.sendFile(path.resolve(__dirname + '/views/Equipos-Americanos.html'))); 
-app.get('/Equipos-Europeos', (req, res) => res.sendFile(path.resolve(__dirname + '/views/Equipos-Europeos.html'))); 
+app.get('/product', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productDetail.ejs')));
+app.get('/car', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productCar.ejs')));
+app.get('/register', (req, res) => res.sendFile(path.resolve(__dirname + '/views/register.ejs')));
+app.get('/login', (req, res) => res.sendFile(path.resolve(__dirname + '/views/login.ejs'))); 
+app.get('/selecciones', (req, res) => res.sendFile(path.resolve(__dirname + '/views/selecciones.ejs')));
+app.get('/resto-del-mundo', (req, res) => res.sendFile(path.resolve(__dirname + '/views/resto-del-mundo.ejs'))); 
+app.get('/equipos-Americanos', (req, res) => res.sendFile(path.resolve(__dirname + '/views/equipos-Americanos.ejs'))); 
+app.get('/equipos-Europeos', (req, res) => res.sendFile(path.resolve(__dirname + '/views/equipos-Europeos.ejs'))); 
 app.get('/index', (req, res) => res.sendFile(path.resolve(__dirname + '/views/index.html'))); 
 app.get('/productCar', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productCar.html'))); 
 app.get('/productDetail', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productDetail.html'))); 
