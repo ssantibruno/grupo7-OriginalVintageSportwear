@@ -7,25 +7,35 @@
         <%- include ('../partials/header') %>
     
     <main>
-        <form action="/" method="POST" class="form-registro">
+        <form action="/register" method="POST" class="form-registro" enctype="multipart/form-data">
             <div>
                 <h2>Crea tu cuenta</h2>
             </div>
             <div class="control-registro">
-                <input type="text" name="user" placeholder="Nombre de usuario">
+                <input type="text" name="firstname" placeholder="Nombre">
+            </div>
+            <div class="control-registro">
+                <input type="text" name="lastname" placeholder="apellido">
             </div>
             <div class="control-registro">
                 <input type="email" name="email" placeholder="E-mail">
             </div>
             <div class="control-registro">
-                <input type="text" name="name" placeholder="Nombre y apellido">
+                <input type="text" name="addres" placeholder="Domicilio">
             </div>
             <div class="control-registro">
-                <input type="text" name="addres" placeholder="Domicilio">
+                <input type="text" name="residencia" placeholder="pais">
             </div>
             <div>
                 <label for="birth_date"><b>Fecha de nacimiento</b></label>
                 <input type="date" name="birth_date" id="birth_date">
+            </div>
+            <div class="control-registro">
+                <input type="text" name="interes" placeholder="club favorito">
+            </div>
+            <div class="control-registro">
+                <label for="img" class="form-label"> <b>Foto:</b></label>
+                <input type="file" accept="image/png, image/jpg, image/jpeg" name="foto" class="product_imageFile">
             </div>
             <div class="contraseña">
                 <input type="password" name="pass" placeholder="Contraseña">
@@ -43,13 +53,10 @@
                 <label>No</label>
             </div>
             <div class="terminos">
-                <p>Estoy de acuerdo con <a href="#">Términos y Condiciones</a></p>
+                <p> <input type="checkbox" name="terminos"> Estoy de acuerdo con <a href="#">Términos y Condiciones</a></p>
             </div>
             <div class="registrarse">
                 <button type="submit">Registrarse</button>
-            </div>    
-            <div class="registrado">
-                <p><a href="#">Ya estoy registrado</a></p>
             </div>    
         </form>
     </main>

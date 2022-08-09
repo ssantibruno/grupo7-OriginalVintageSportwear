@@ -17,8 +17,32 @@
                     <input type="text" name="product_name" placeholder="Añadir Nombre de Producto">
                 </div>
                 <div class="control-registro">
+                    <label for="description" class="form-label">Descripción del producto:</label>
+                    <input type="text" name="description_name" placeholder="Descripción de Producto">
+                </div>
+                <div class="control-registro">
                     <label for="price" class="form-label">Precio del producto:</label>
                     <input type="text" name="product_price" placeholder="Añadir Precio de Producto">
+                </div>
+                <div class="control-registro">
+                    <label for="category" class="form-label">Categoria del producto:</label>
+                    <div class="seleccion-status">
+                        <select name="category">
+                            <option value="Seleccion">Selección</option>
+                            <option value="EquiposAmericanos">Equipos Americanos</option>
+                            <option value="EquiposEuropeos">Equipos Europeos</option>
+                            <option value="RestoDelMundo">Resto del Mundo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-registro">
+                    <label for="status" class="form-label">Consideración del producto:</label>
+                    <div class="seleccion-status">
+                        <select name="type">
+                            <option value="Oferta">Oferta</option>
+                            <option value="Destacado">Destacado</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="control-registro">
                     <label for="size" class="form-label">Talle del producto:</label>
@@ -27,9 +51,18 @@
                 <div class="control-registro">
                     <label for="status" class="form-label">Status del producto:</label>
                     <div class="seleccion-status">
-                        <select>
+                        <select name="seleccion-status" >
                             <option value="Disponible">Disponible</option>
                             <option value="Agotado">Agotado</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-registro">
+                    <label for="status" class="form-label">Condición del producto:</label>
+                    <div class="seleccion-status">
+                        <select name="condition">
+                            <option value="Nuevo">Nuevo</option>
+                            <option value="Usado">Usado</option>
                         </select>
                     </div>
                 </div>
@@ -42,8 +75,12 @@
                 </div>
             </div>
             
+
+            
             
         </form>
+
+
     </main>
 
 </body>
