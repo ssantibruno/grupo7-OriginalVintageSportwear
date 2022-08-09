@@ -2,6 +2,7 @@ const mainController={
     index: (req,res) => {
         res.render('index')},
     register: (req,res) =>{
+
         res.render('./users/register.ejs')},
     login: (req,res) => {
         res.render('./users/login.ejs')},
@@ -16,11 +17,12 @@ const mainController={
     productCar: (req,res) => {
         res.render('./users/productCar.ejs')},
     productDetail: (req,res) => {
-        res.render('./users/productDetail.ejs')},  
+        res.render('./products/productDetail.ejs')},  
     productCreateForm: (req,res) => {
         res.render('./products/productCreateForm.ejs')},
     productEditForm: (req,res) => {
         res.render('./products/productEditForm.ejs')}, 
-}
 
-module.exports = mainController;
+
+}
+ module.exports = mainController;
