@@ -935,6 +935,17 @@ form{
 }
 }
 
+/********newsletter*******/
+
+.suscripcion{
+    font-size: 20px;
+}
+
+.suscripcion input{
+    background-color: #d2b108;
+    padding: 5px;
+    border-radius: 10px;
+}
 
 
 
