@@ -2,29 +2,6 @@ const mainController={
     index: (req,res) => {
         res.render('index')},
     register: (req,res) =>{
-<<<<<<< HEAD
-        res.render('./users/register.ejs')
-    },
-    login: (req, res) =>{
-        res.render('./users/login.ejs')
-    },
-    productCar: (req, res) =>{
-        res.render('./users/productCar.ejs')
-    },
-    selecciones: (req, res) =>{
-        res.render('./products/selecciones.ejs')
-    },
-    equiposAmericanos: (req, res)=> {
-        res.render('./products/equipos-Americanos.ejs')
-    },
-    equiposEuropeos: (req, res)=> {
-        res.render('./products/equipos-Europeos.ejs')
-    },
-    restoDelMundo: (req, res)=> {
-        res.render('./products/resto-del-mundo.ejs')
-    }
-         
-=======
         res.render('./users/register.ejs')},
     login: (req,res) => {
         res.render('./users/login.ejs')},
@@ -44,7 +21,6 @@ const mainController={
         res.render('./products/productCreateForm.ejs')},
     productEditForm: (req,res) => {
         res.render('./products/productEditForm.ejs')}, 
->>>>>>> 0460c6dac38315f238917d703ee3e8ce09d0c09b
 }
 
 module.exports = mainController;
