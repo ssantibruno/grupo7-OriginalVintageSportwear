@@ -31,4 +31,5 @@ router.get('/productDetail',mainController.productDetail);
 router.get('/productCreateForm',mainController.productCreateForm);
 router.get('/productEditForm',mainController.productEditForm);
 
+
 module.exports = router;
