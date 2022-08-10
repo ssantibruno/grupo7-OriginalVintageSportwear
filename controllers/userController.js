@@ -1,7 +1,7 @@
 const fs= require('fs');
 const path= require('path');
 
-const userFilePath = path.join(__dirname, '../Data/users.json');
+const userFilePath = path.join(__dirname, '../data/users.json');
 const usuarios=JSON.parse(fs.readFileSync(userFilePath,'utf-8'));
 
 const userController= {
@@ -9,22 +9,27 @@ const userController= {
         res.render('./users/register.ejs')},
 
     createUser: (req, res, next) => {
-        let foto
-        if (req.file != undefined){
-            foto=req.files.filename
+        let image
+        if (req.files[0] != undefined){
+            image=req.files[0].filename
         }else{
-            foto='default-image.jpg' }
+            image='fotodefault.png'}
         let newUser = {
             id: usuarios[usuarios.length-1].id+1,
             ...req.body,
-            foto:foto}
+            image:image}
         usuarios.push(newUser)
-        fs.appendFileSync(userFilePath, JSON.stringify(usuarios, null, ' ')),
+        fs.writeFileSync(userFilePath, JSON.stringify(usuarios, null, ' ')),
         res.redirect ("/")},
               
     
     login: (req,res) => {
         res.render('./users/login.ejs')},
+    
+    usersList: (req,res) => {
+        res.render('./users/usersList.ejs', {usuarios})
+    }
+    
 };
 
 
