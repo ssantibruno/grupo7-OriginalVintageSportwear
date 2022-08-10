@@ -19,7 +19,7 @@ const uploadFileUser = multer ({storage});
 router.get('/register',userController.register);
 router.post('/',uploadFileUser.single('foto'),userController.createUser);
 router.get('/login',userController.login);
-
+router.get('/usersList',userController.usersList);
 
 router.get('/selecciones',mainController.selecciones);
 router.get('/restoDelMundo',mainController.restoDelMundo);
@@ -30,6 +30,7 @@ router.get('/productDetail',mainController.productDetail);
 router.get('/productCreateForm',mainController.productCreateForm);
 router.get('/productEditForm',mainController.productEditForm);
 
+router.get('/productList',mainController.productsList);
 
 
 module.exports = router;
