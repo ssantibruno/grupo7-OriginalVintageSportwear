@@ -67,5 +67,20 @@
   "notifiaciones": "No",
   "terminos": "on",
   "image": "fotodefault.png"
+ },
+ {
+  "id": 6,
+  "firstName": "Miguel",
+  "lastName": "Borja",
+  "email": "nuevonueve@gmail.com",
+  "addres": "",
+  "residencia": "Argentina",
+  "birth_date": "1993-01-22",
+  "intereses": "Cucuta Deportivo",
+  "pass": "112233",
+  "pass_confirm": "112233",
+  "notifiaciones": "Si",
+  "terminos": "on",
+  "image": "image-1660140302093.jpg"
  }
 ]

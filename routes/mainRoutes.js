@@ -1,6 +1,8 @@
 const express= require('express');
 const router= express.Router();
 const multer= require('multer');
+const path = require('path');
+const validaciones = require ('../middlewares/validaciones.js');
 const mainController= require("../controllers/mainController.js");
 const userController= require("../controllers/userController.js");
 
@@ -9,15 +11,15 @@ router.get('/index',mainController.index);
 
 const storage=multer.diskStorage({
     destination: function (req, file, cb){
-        cb(null, ".public/img/usuarios")  },
+        cb(null, "./public/img/usuarios")  },
     filename: function (req, file, cb){
-        cb(null, '${Date.now()}_img_user${path.extname(file.originalname)}') },
+        cb(null, file.fieldname +"-"+ Date.now() + path.extname(file.originalname)) },
 });
 
 const uploadFileUser = multer ({storage});
 
 router.get('/register',userController.register);
-router.post('/',uploadFileUser.single('foto'),userController.createUser);
+router.post('/',validaciones,uploadFileUser.any(),userController.createUser);
 router.get('/login',userController.login);
 router.get('/usersList',userController.usersList);
 
