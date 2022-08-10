@@ -9,11 +9,13 @@
         <%- include ('../partials/header') %>
     
     <main>
-        <form action="/" method="POST" class="form-registro">
+        <form action="/products/edit/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" style="display:inline-flex" class="form-registro">
             <div class="divCreateProduct">
                 <div>
-                    <h2 class="createProductTitle">Editar Producto</h2>
+                    <h2 class="createProductTitle">Editar Producto <%=productToEdith.id%> </h2>
                 </div>
+                <form action="/products/edit/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" style="display:inline-flex">
+                        
                 <div class="control-registro">
                     <label for="name" class="form-label">Nombre del producto:</label>
                     <input type="text" name="product_name" placeholder="Editar Nombre de Producto">

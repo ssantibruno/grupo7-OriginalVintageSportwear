@@ -82,5 +82,18 @@
   "notifiaciones": "Si",
   "terminos": "on",
   "image": "image-1660140302093.jpg"
+ },
+ {
+  "id": 7,
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "addres": "",
+  "residencia": "",
+  "birth_date": "",
+  "intereses": "",
+  "pass": "",
+  "pass_confirm": "",
+  "image": "fotodefault.png"
  }
 ]
