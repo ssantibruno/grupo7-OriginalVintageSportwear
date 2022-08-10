@@ -1,0 +1,31 @@
+.usuariosLista{
+    margin: 15px;
+    padding: 15px;
+}
+.usuariosList{
+    margin: 20px;
+    width: 100%;
+}
+
+.tarjetaUsuario{
+    display: flex;
+    flex-direction: row;
+}
+
+.imagenUsuario{
+    width: 15%;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+.imagenUsuario img{
+    width: 150px;
+    width: 150px;
+    
+}
+
+.cajaArticuloList{
+    width: 80%;
+}

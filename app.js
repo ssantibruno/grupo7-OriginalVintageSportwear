@@ -19,7 +19,7 @@ app.use('/Equipos-Americanos', mainRoutes);
 app.use('/Equipos-Europeos', mainRoutes);
 app.use('/productCar', mainRoutes);
 app.use('/productDetail', mainRoutes);
-
+app.use('/productList', mainRoutes);
 
 
 app.listen(3000, ()=>{   console.log('Servidor esta corriendo');
