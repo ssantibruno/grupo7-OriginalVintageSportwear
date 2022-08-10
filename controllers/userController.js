@@ -10,8 +10,8 @@ const userController= {
 
     createUser: (req, res, next) => {
         let image
-        if (req.file != undefined){
-            image=req.files.filename
+        if (req.files[0] != undefined){
+            image=req.files[0].filename
         }else{
             image='fotodefault.png'}
         let newUser = {
