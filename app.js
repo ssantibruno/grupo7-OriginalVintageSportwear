@@ -20,8 +20,6 @@ app.use('/Equipos-Europeos', mainRoutes);
 app.use('/productCar', mainRoutes);
 app.use('/productDetail', mainRoutes);
 
-
-<<<<<<< HEAD
 app.get('/product', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productDetail.ejs')));
 app.get('/car', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productCar.ejs')));
 app.get('/register', (req, res) => res.sendFile(path.resolve(__dirname + '/views/register.ejs')));
@@ -33,8 +31,6 @@ app.get('/equipos-Europeos', (req, res) => res.sendFile(path.resolve(__dirname +
 app.get('/index', (req, res) => res.sendFile(path.resolve(__dirname + '/views/index.html'))); 
 app.get('/productCar', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productCar.html'))); 
 app.get('/productDetail', (req, res) => res.sendFile(path.resolve(__dirname + '/views/productDetail.html'))); 
-=======
->>>>>>> 0460c6dac38315f238917d703ee3e8ce09d0c09b
 
 app.listen(3000, ()=>{   console.log('Servidor esta corriendo');
 });
