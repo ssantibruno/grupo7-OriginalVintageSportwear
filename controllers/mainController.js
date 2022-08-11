@@ -23,13 +23,6 @@ const mainController={
         res.render('./products/equiposEuropeos.ejs')},
     productCar: (req,res) => {
         res.render('./users/productCar.ejs')},
-    productDetail: (req,res) => {
-        res.render('./products/productDetail.ejs')},  
-    productCreateForm: (req,res) => {
-        res.render('./products/productCreateForm.ejs')},
-    productEditForm: (req,res) => {
-        res.render('./products/productEditForm.ejs')}, 
-
     productsList: (req, res) => {
             res.render('./products/productList.ejs', {products} )},
 }
