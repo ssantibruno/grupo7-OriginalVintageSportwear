@@ -15,10 +15,10 @@ const uploadFileProducts = multer ({storage});
 
 router.get('/', productsController.index);
 
-router.get('/productCreateForm',productsController.productCreateForm);
+router.get('/create',productsController.productCreateForm);
 // router.post('/',uploadFileProducts.any(), productsController.productStore);
 
-router.get('/:id', productsController.productDetail);
+router.get('/detail/:id', productsController.productDetail);
 
 // router.get('/:id/edith',productsController.productEdith);
 // router.patch('/:id',uploadFileProducts.any(), productsController.productUpdate);

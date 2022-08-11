@@ -95,5 +95,31 @@
   "pass": "",
   "pass_confirm": "",
   "image": "fotodefault.png"
+ },
+ {
+  "id": 8,
+  "firstName": "Damian",
+  "lastName": "Fernandez",
+  "email": "cancer18ar@hotmail.com",
+  "addres": "",
+  "residencia": "",
+  "birth_date": "",
+  "intereses": "",
+  "pass": "",
+  "pass_confirm": "",
+  "image": "fotodefault.png"
+ },
+ {
+  "id": 9,
+  "firstName": "Enzo",
+  "lastName": "Fernandez",
+  "email": "fer@hotmail.com",
+  "addres": "",
+  "residencia": "",
+  "birth_date": "",
+  "intereses": "",
+  "pass": "1121",
+  "pass_confirm": "",
+  "image": "image-1660177782580.jpg"
  }
 ]

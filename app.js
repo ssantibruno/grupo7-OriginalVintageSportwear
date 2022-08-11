@@ -5,8 +5,17 @@ const mainRoutes=require("./routes/mainRoutes");
 const productsRoutes=require("./routes/productsRoutes");
 const methodOverride=require("method-override");
 
-app.use( express.static('public'));
 app.set('view engine','ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+
+//app.use( express.static('./public'));
+//app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname, './public')));
+//app.use('/public', express.static(path.join(__dirname, 'public')));
+
+//app.set('view engine','ejs');
+//app.set('views', path.join(__dirname, 'views'));
 app.use(methodOverride('_method'));
 
 // RUTAS
