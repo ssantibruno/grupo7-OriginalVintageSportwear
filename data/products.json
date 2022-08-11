@@ -202,5 +202,17 @@
   "condition": "Nuevo",
   "product_price": "11000",
   "image": "product_img-1660248904138.jpg"
+ },
+ {
+  "id": 22,
+  "product_name": "Camiseta Arquero Atletico Madrid",
+  "description_name": "Camiseta titular de Arquero, temporada 2020",
+  "category": "EquiposEuropeos",
+  "type": "Destacado",
+  "product_size": "L",
+  "status": "Disponible",
+  "condition": "Nuevo",
+  "product_price": "11000",
+  "image": "product_img-1660259309212.jpg"
  }
 ]
