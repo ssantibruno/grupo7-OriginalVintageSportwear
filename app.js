@@ -24,12 +24,14 @@ app.use('/index', mainRoutes);
 app.use('/register', mainRoutes);
 app.use('/productList', mainRoutes);
 
+
 app.use('/products', productsRoutes);
 
 //error 404
 app.use ( (req, res, next) => {
     res.status(404).render('not-found-error.ejs')
 },)
+
 
 app.listen(3000, ()=>{   console.log('Servidor esta corriendo');
 });
