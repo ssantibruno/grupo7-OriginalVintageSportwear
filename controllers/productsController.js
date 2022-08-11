@@ -18,7 +18,7 @@ const productsController={
     productCreateForm: (req,res) => {
         res.render('./products/productCreateForm.ejs')},
     
-    productStore: (req, res) => {
+    productStore: (req, res, next) => {
         let image
         if (req.files[0] != undefined) {
             image = req.files[0].filename
@@ -26,42 +26,51 @@ const productsController={
             image="default-product-image.jpg"
         }
         let newproduct = {
-            id:products[products.lenght-1].id+1,
+            id:products[products.length-1].id+1,
             ...req.body,
             image:image
         }
         products.push(newproduct)
         fs.writeFileSync(productsFilePath,JSON.stringify(products,null," "));
-        res.redirect ('/products/productList');    },
+        res.redirect ('/products')    },
     
     productEditForm: (req,res) => {
         let id= req.params.id
         let productToEdit=products.find(products=>products.id==id)
-        res.render('./products/productEditForm.ejs',{productToEdit})}, 
+        res.render('./products/productEditForm.ejs', {productToEdit})}, 
 
     productUpdate: (req,res) => {
         let id = req.params.id
         let productToEdit=products.find(products=>products.id==id)
         let image
-            if(req.file[0] != undefined) {
-                image = req.file[0].filename
-            }else{ image=productToEdit.image}
-            productToEdith={
+
+            if(req.file != undefined) {
+                image = req.file.filename
+            }else{ 
+                image=productToEdit.image
+            }
+            productToEdit = {
                 id: productToEdit.id,
                 ...req.body,
-                image:image,}
+                image:image,};
+
             let newproduct = products.map (product => {
                 if (product.id == productToEdit.id){
                     return product = {...productToEdit};
-                    return product }           })
+                       }
+                       return product;
+                    })
+
             fs.writeFileSync(productsFilePath,JSON.stringify(newproduct,null," "));
-            res.redirect("/");
+            res.redirect("/products");
     },
+
+
     productDestroy: (req, res) => {
         let id= req.params.id;
         let finalproducts =  products.filter(products=>products.id != id)
         fs.writeFileSync(productsFilePath, JSON.stringify(finalproducts,null," "));
-        res.redirect("/");
+        res.redirect("/products");
     }
 
 }

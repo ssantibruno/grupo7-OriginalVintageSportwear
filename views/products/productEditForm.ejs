@@ -9,40 +9,92 @@
         <%- include ('../partials/header') %>
     
     <main>
-        <form action="/products/edit/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" style="display:inline-flex" class="form-registro">
             <div class="divCreateProduct">
                 <div>
-                    <h2 class="createProductTitle">Editar Producto <%=productToEdith.id%> </h2>
+                    <h2 class="createProductTitle">Editar Producto <%=productToEdit.id%> </h2>
                 </div>
-                <form action="/products/edit/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" style="display:inline-flex">
-                        
-                <div class="control-registro">
-                    <label for="name" class="form-label">Nombre del producto:</label>
-                    <input type="text" name="product_name" placeholder="Editar Nombre de Producto">
-                </div>
-                <div class="control-registro">
-                    <label for="price" class="form-label">Precio del producto:</label>
-                    <input type="text" name="product_price" placeholder="Editar Precio de Producto">
-                </div>
-                <div class="control-registro">
-                    <label for="size" class="form-label">Talle del producto:</label>
-                    <input type="text" name="product_size" placeholder="Talle del Producto">
-                </div>
-                <div class="control-registro">
-                    <label for="status" class="form-label">Status del producto:</label>
-                    <div class="seleccion-status">
-                        <select>
-                            <option value="Disponible">Disponible</option>
-                            <option value="Agotado">Agotado</option>
-                        </select>
+                <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" style="display:inline-flex">
+                <div class="caja-editar-poducto">        
+                    <div class="control-registro-name">
+                        <label for="name" class="form-label">Nombre del producto:</label>
+                        <input type="text" name="product_name" placeholder="<%= productToEdit.product_name %>">
                     </div>
-                </div>
-                <div class="control-registro">
-                    <label for="img" class="form-label">Imagen del producto:</label>
-                    <input type="file" accept="image/png, image/jpg, image/jpeg" name="product_img" class="product_imageFile">
-                </div>
-                <div class="control-registro">
-                    <input type="submit" name="addProductButton" class="addProductButton" value="Editar Producto">
+                    <div class="control-registro-description">
+                        <label for="description" class="form-label">Descripción del producto:</label>
+                        <input type="text" name="description_name" placeholder="<%= productToEdit.description_name %>">
+                    </div>
+                    <div class="caja-ingreso">
+                        <div class="control-registro">
+                            <label for="category" class="form-label">Categoria del producto:</label>
+                            <div class="seleccion-status">
+                                <select name="category">
+                                    <option value=".">..</option>
+                                    <option value="Seleccion">Selecciones</option>
+                                    <option value="EquiposAmericanos">Equipos Americanos</option>
+                                    <option value="EquiposEuropeos">Equipos Europeos</option>
+                                    <option value="RestoDelMundo">Resto del Mundo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-registro">
+                            <label for="status" class="form-label">Condición de venta:</label>
+                            <div class="seleccion-status">
+                                <select name="type">
+                                    <option value=".">..</option>
+                                    <option value="Oferta">Oferta</option>
+                                    <option value="Destacado">Destacado</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caja-ingreso">
+                        <div class="control-registro">
+                            <label for="size" class="form-label">Talle del producto:</label>
+                            <select name="product_size">
+                                <option value=".">..</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </div>
+                        <div class="control-registro">
+                            <label for="status" class="form-label">Status del producto:</label>
+                            <div class="seleccion-status">
+                                <select name="status" >
+                                    <option value=".">..</option>
+                                    <option value="Disponible">Disponible</option>
+                                    <option value="Agotado">Agotado</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caja-ingreso">
+                        <div class="control-registro">
+                            <label for="status" class="form-label">Condición del producto:</label>
+                            <div class="seleccion-status">
+                                <select name="condition" >
+                                    <option value=".">..</option>
+                                    <option value="Nuevo">Nuevo</option>
+                                    <option value="Usado">Usado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-registro">
+                            <label for="price" class="form-label">Precio del producto:</label>
+                            <input type="text" name="product_price" placeholder="<%= productToEdit.product_price %>">
+                        </div>
+                    </div>
+    
+                    <div class="control-registro">
+                        <label for="img" class="form-label">Imagen del producto:</label>
+                        <input type="file" accept="image/png, image/jpg, image/jpeg" name="product_img" class="product_imageFile">
+                    </div>
+    
+                    <div class="caja-boton-anadir">
+                        <button type="submit" class="addProductButton">Editar Producto</button>
+                    </div>
+                    
                 </div>
             </div>
             

@@ -11,7 +11,7 @@
     <main class="main-product-detail">
          <div class="card">
             <div class="imgBox">
-                <img src="/img/<%=product.product_img%>" alt="<%= product.product_name %>">
+                <img src="/img/products/<%=product.image%>" alt="<%= product.product_name %>">
             </div>
             <div class="details">
                 <div class="name-product">
@@ -51,7 +51,7 @@
                 <div class="caja-edicion-borrar">
                     <div class="editar">
                         <button class="boton-editar">
-                            <a href="/products/edith/<%= product.id %>">Editar</a>
+                            <a href="/products/edit/<%= product.id %>">Editar</a>
                         </button>
                     </div>
                     <div class="borrar">

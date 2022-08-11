@@ -1,0 +1,86 @@
+.caja-formularion-creacion{
+    margin-top: 150px;
+}
+.form-create{
+    align-items: center;
+}
+
+.divCreateProduct {
+    width: 60%;
+    background-color: #666;
+    padding: 15px;
+    margin: 40px auto;
+    border: solid 2px rgb(58, 58, 160);
+    display: flex;
+    flex-direction: column;
+    }
+.createProductTitle{
+    text-align: center;
+    padding: 10px;
+}
+.control-registro-name, .control-registro-description{
+    padding: 10px;
+}
+
+.caja-ingreso{
+    display: flex;
+    flex-direction: row;
+}
+
+.control-registro{
+    display: flex;
+    padding: 10px;
+}
+
+.form-registro{
+    padding: 20px;
+    text-align: center;
+}
+
+.caja-boton-anadir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addProductButton{
+    border-radius: 30%;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+
+
+
+
+/*
+
+
+
+
+.form-registro div h2{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-style: italic;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium';
+    text-decoration: underline;
+}
+
+.form-registro div{
+    margin-bottom: 10px;
+    padding: 2px;
+    display: block;
+}
+
+.control-registro input{
+    padding: 4px;
+    width: 80%;
+    max-width: 350px;
+    border-radius: 6px;
+    border: solid 1px rgb(58, 58, 160);
+}
+*/
+
