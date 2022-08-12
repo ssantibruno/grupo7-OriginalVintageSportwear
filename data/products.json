@@ -180,18 +180,6 @@
   "image": "product_img-1660246995748.jpg"
  },
  {
-  "id": 20,
-  "product_name": "remera",
-  "description_name": "",
-  "category": ".",
-  "type": ".",
-  "product_size": ".",
-  "status": ".",
-  "condition": ".",
-  "product_price": "1",
-  "image": "default-product-image.jpg"
- },
- {
   "id": 21,
   "product_name": "Camiseta Selección Argentina 86",
   "description_name": "camiseta suplente del mundial, donde Diego Armando Maradona hizo historia. replica",
@@ -202,5 +190,29 @@
   "condition": "Nuevo",
   "product_price": "11000",
   "image": "product_img-1660248904138.jpg"
+ },
+ {
+  "id": 22,
+  "product_name": "Camiseta Moron",
+  "description_name": "camiseta de Morón temporada 2021",
+  "category": "EquiposAmericanos",
+  "type": "Destacado",
+  "product_size": "M",
+  "status": "Disponible",
+  "condition": "Nuevo",
+  "product_price": "1000",
+  "image": "product_img-1660315619779.jpg"
+ },
+ {
+  "id": 23,
+  "product_name": "roja 2",
+  "description_name": "roja",
+  "category": ".",
+  "type": ".",
+  "product_size": ".",
+  "status": ".",
+  "condition": ".",
+  "product_price": "2",
+  "image": "default-product-image.jpg"
  }
 ]
