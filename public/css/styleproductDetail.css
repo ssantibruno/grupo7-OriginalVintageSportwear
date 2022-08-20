@@ -1,0 +1,124 @@
+/******************* ProductDetail **************/
+
+.main-product-detail{
+    margin-top: 233px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: rgb(194, 194, 194);
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 15px 15px rgba(0, 0 , 0, 0.25);
+}
+
+.imgBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 40%;
+}
+
+.card .imgBox img{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*.card .imgBox:hover{
+    transform: scale(1.1);
+}*/
+
+.card .details{
+    background: rgb(138, 137, 137);
+    width: 60%;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    color: white;
+    
+}
+
+.card .details .name-product {
+    font-size: 30px; 
+    padding: 5px;
+    text-align: center; 
+    color: black; 
+}
+
+.card .details .description{
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+.caja-categoria-type, .caja-talle-condicion, .caja-precio-status{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.categoria, .type, .size, .condition, .price, .status{
+    display: flex;
+}
+
+
+.card .details .buy{
+    border-top: 1px solid rgb(216, 213, 213);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+
+.caja-buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid black;
+    padding: 15px 
+}
+
+.boton-buy{
+    padding: 5px;
+    border-radius: 15%;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(110, 163, 247);
+}
+
+.caja-edicion-borrar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 15px;
+    border-top: 1px solid black;
+}
+
+.editar, .borrar {
+    display: flex;
+}
+
+.boton-editar, .boton-borrar{
+    padding: 5px;
+    border-radius: 20%;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(110, 163, 247);
+}

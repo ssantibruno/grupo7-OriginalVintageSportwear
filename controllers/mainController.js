@@ -1,3 +1,10 @@
+const fs= require('fs');
+const path= require('path');
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products=JSON.parse(fs.readFileSync(productsFilePath,'utf-8'));
+
+
 const mainController={
     index: (req,res) => {
         res.render('index')},
@@ -16,13 +23,7 @@ const mainController={
         res.render('./products/equiposEuropeos.ejs')},
     productCar: (req,res) => {
         res.render('./users/productCar.ejs')},
-    productDetail: (req,res) => {
-        res.render('./products/productDetail.ejs')},  
-    productCreateForm: (req,res) => {
-        res.render('./products/productCreateForm.ejs')},
-    productEditForm: (req,res) => {
-        res.render('./products/productEditForm.ejs')}, 
-
-
+    productsList: (req, res) => {
+            res.render('./products/productList.ejs', {products} )},
 }
  module.exports = mainController;

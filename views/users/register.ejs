@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include ('../partials/head') %>
-
+    <head>
+        <%- include ('../partials/head') %>
+    </head>
     <body>
         <%- include ('../partials/header') %>
     
@@ -12,10 +13,10 @@
                 <h2>Crea tu cuenta</h2>
             </div>
             <div class="control-registro">
-                <input type="text" name="firstname" placeholder="Nombre">
+                <input type="text" name="firstName" placeholder="Nombre">
             </div>
             <div class="control-registro">
-                <input type="text" name="lastname" placeholder="apellido">
+                <input type="text" name="lastName" placeholder="apellido">
             </div>
             <div class="control-registro">
                 <input type="email" name="email" placeholder="E-mail">
@@ -31,11 +32,11 @@
                 <input type="date" name="birth_date" id="birth_date">
             </div>
             <div class="control-registro">
-                <input type="text" name="interes" placeholder="club favorito">
+                <input type="text" name="intereses" placeholder="club favorito">
             </div>
             <div class="control-registro">
                 <label for="img" class="form-label"> <b>Foto:</b></label>
-                <input type="file" accept="image/png, image/jpg, image/jpeg" name="foto" class="product_imageFile">
+                <input type="file" accept="image/png, image/jpg, image/jpeg" name="image" class="product_imageFile">
             </div>
             <div class="contraseña">
                 <input type="password" name="pass" placeholder="Contraseña">

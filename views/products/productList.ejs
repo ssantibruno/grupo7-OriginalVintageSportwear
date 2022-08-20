@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <%- include ('../partials/head') %>
+    </head>
+
+    <body>
+        <%- include ('../partials/header') %>
+    
+        <main>
+            <section class="productList">
+                <h3>Listado de productos</h3>
+                <% products.forEach (function (products){ %>
+
+                <section class="articulosList">
+                    <div class="articuloList">
+                        <div class="cajaImagenList">
+                            <a href="/products/detail/<%=products.id%>">
+                            <img class="imagenarticuloList" src="./img/products/<%= products.image %>" alt="<%= products.product_name %>" >
+                            </a>
+                        </div>
+                        <div class="cajaArticuloList">
+                            <h4 class="product_name"> <%= products.product_name %> </h4>
+                            <p class="descripcion"> Descripcion: <%= products.description_name %></p>
+                            <div class="caja2listproducts">
+                            <p class="precio">Precio: $<%= products.product_price %></p>
+                            <p class="talle"> Talle: <%= products.product_size %> </p>
+                            <p class="condition"> Condicion: <%= products.condition %> </p>
+                            </div>
+                            <div class="caja2listproducts">
+                            <p class="category"> Categoria: <%= products.category %></p>
+                            <p class="type"> Tipo: <%= products.type %></p>
+                            <p class="seleccion-status"> Status: <%= products.status %></p>
+                            </div>
+                        </div> 
+                    </div>                
+                </section>
+                <% }) %>
+
+            </section>
+        </main>
+    
+    </body>
+    
+    </html>
