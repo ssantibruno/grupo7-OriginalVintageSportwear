@@ -95,5 +95,20 @@
   "pass": "",
   "pass_confirm": "",
   "image": "fotodefault.png"
- }
+ },
+ {
+  "id": 8,
+  "firstName": "Damian ",
+  "lastName": "Akerman",
+  "email": "gallo@hotmail.com",
+  "addres": "moron",
+  "residencia": "Argentina",
+  "birth_date": "1980-02-01",
+  "intereses": "deportivo Moron",
+  "pass": "1234",
+  "pass_confirm": "1234",
+  "notifiaciones": "Si",
+  "terminos": "on",
+  "image": "image-1660999341563.jpg"
+}
 ]

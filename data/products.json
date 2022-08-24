@@ -203,11 +203,11 @@
   "product_price": "11000",
   "image": "product_img-1660248904138.jpg"
  },
- {
+  {
   "id": 22,
-  "product_name": "Camiseta Deportivo Morón",
-  "description_name": "camiseta original temporada 2020",
-  "category": "Equipos Americanos",
+  "product_name": "camiseta Deportivo Moron",
+  "description_name": "Camiseta titular temporada 2020",
+  "category": "EquiposAmericanos",
   "type": "Oferta",
   "product_size": "M",
   "status": "Disponible",

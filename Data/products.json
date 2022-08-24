@@ -171,7 +171,7 @@
   "id": 19,
   "product_name": "Camiseta River Plate 86",
   "description_name": "Modelo suplente 86, imitación de muy buena calidad",
-  "category": "EquiposAmericanos",
+  "category": "Equipos Americanos",
   "type": "Destacado",
   "size": "M",
   "seleccion-status": "Disponible",
@@ -202,5 +202,17 @@
   "condition": "Nuevo",
   "product_price": "11000",
   "image": "product_img-1660248904138.jpg"
+ },
+  {
+  "id": 22,
+  "product_name": "camiseta Deportivo Moron",
+  "description_name": "Camiseta titular temporada 2020",
+  "category": "EquiposAmericanos",
+  "type": "Oferta",
+  "product_size": "M",
+  "status": "Disponible",
+  "condition": "Nuevo",
+  "product_price": "8000",
+  "image": "product_img-1661369912221.jpg"
  }
 ]
