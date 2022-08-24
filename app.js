@@ -8,21 +8,15 @@ const methodOverride=require("method-override");
 app.set('view engine','ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-
-//app.use( express.static('./public'));
-//app.use(express.static(path.join(__dirname,'public')));
 app.use(express.static(path.join(__dirname, './public')));
-//app.use('/public', express.static(path.join(__dirname, 'public')));
 
-//app.set('view engine','ejs');
-//app.set('views', path.join(__dirname, 'views'));
 app.use(methodOverride('_method'));
 
 // RUTAS
 app.use('/', mainRoutes);
 app.use('/index', mainRoutes); 
 app.use('/register', mainRoutes);
-app.use('/productList', mainRoutes);
+
 
 app.use('/products', productsRoutes);
 

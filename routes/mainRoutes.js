@@ -18,7 +18,7 @@ const storage=multer.diskStorage({
 
 const uploadFileUser = multer ({storage});
 
-router.get('/register',userController.register);
+router.get('/register',validaciones,userController.register);
 router.post('/',validaciones,uploadFileUser.any(),userController.createUser);
 router.get('/login',userController.login);
 router.get('/usersList',userController.usersList);
@@ -30,7 +30,6 @@ router.get('/equiposEuropeos',mainController.equiposEuropeos);
 router.get('/productCar',mainController.productCar);
 
 
-router.get('/productList',mainController.productsList);
 
 
 module.exports = router;
