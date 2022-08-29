@@ -203,7 +203,7 @@
   "product_price": "11000",
   "image": "product_img-1660248904138.jpg"
  },
-  {
+ {
   "id": 22,
   "product_name": "camiseta Deportivo Moron",
   "description_name": "Camiseta titular temporada 2020",
@@ -214,5 +214,17 @@
   "condition": "Nuevo",
   "product_price": "8000",
   "image": "product_img-1661369912221.jpg"
+ },
+ {
+  "id": 23,
+  "product_name": "Camiseta Arquero Atletico Madrid",
+  "description_name": "Camiseta titular de Arquero, temporada 2020",
+  "category": "Equipos Europeos",
+  "type": "Oferta",
+  "product_size": "L",
+  "status": "Disponible",
+  "condition": "Nuevo",
+  "product_price": "9000",
+  "image": "product_img-1661816959045.jpg"
  }
 ]
