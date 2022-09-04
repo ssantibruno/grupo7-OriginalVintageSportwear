@@ -4,6 +4,6 @@ function guestMiddleware (req, res, next){
 	}else{
 		res.send('Esta pagina es solo para invitados');
 	}
-}
+};
 
 module.exports = guestMiddleware;
