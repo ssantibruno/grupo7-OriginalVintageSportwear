@@ -9,7 +9,18 @@
         <%- include ('../partials/header') %>
     
     <main>
-      <form action="/" method="POST" class="create-form">
+        <% if (typeof errors != 'undefined') { %>
+            <p style="color:red"> ERROR </p>
+            <ul>
+                <% for (let i=0; i < errors.length; i++) { %>
+                    <li>
+                        <%=errors[i].msg%>
+                    </li>
+                <% } %>
+            </ul>
+            <%  } %>
+
+      <form action="/login" method="POST" class="create-form">
         <div class="form-bienvenido">
             <p>¡Bienvenidos!</p>
         </div>
@@ -22,7 +33,7 @@
             <input type="password" name="password" placeholder="Contraseña" class="input">
         </div>
         <div class="items-form">
-           <button class="button">Iniciar Sesión</button>
+            <button  class="button" type="submit" value='Iniciar Sesión'>Iniciar Sesión</button>
         </div>
         <div class="olvide-contraseña">
             <a href="#">Olvide mi contraseña</a>

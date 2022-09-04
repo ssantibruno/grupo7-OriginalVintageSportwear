@@ -4,6 +4,7 @@ const app = express();
 const mainRoutes=require("./routes/mainRoutes");
 const productsRoutes=require("./routes/productsRoutes");
 const methodOverride=require("method-override");
+const session=require('express-session');
 
 app.set('view engine','ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -11,6 +12,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, './public')));
 
 app.use(methodOverride('_method'));
+app.use(session({secret:'Secreto!!',resave: false,
+saveUninitialized: true,}));
 
 // RUTAS
 app.use('/', mainRoutes);
