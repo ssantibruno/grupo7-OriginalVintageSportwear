@@ -1,5 +1,7 @@
 const express = require('express');
 const path = require('path');
+const cookies = require('cookie-parser');
+
 const app = express(); 
 const mainRoutes=require("./routes/mainRoutes");
 const productsRoutes=require("./routes/productsRoutes");
@@ -11,6 +13,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, './public')));
 
+app.use(cookies());
 app.use(methodOverride('_method'));
 app.use(session({secret:'Secreto!!',resave: false,
 saveUninitialized: true,}));

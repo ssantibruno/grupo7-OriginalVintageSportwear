@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include ('../partials/head') %>
+    </head>
+    
+    <body>
+        <%- include ('../partials/header') %>
+    
+    <main>
+        <section class="usuariosLista">
+            <h3>Bienvenido <%= user.firstName %> </h3>
+
+            <section class="usuariosList">
+                <div class="tarjetaUsuario">
+                    <div class="imagenUsuario">
+                        <img class="fotoUsuario" src="./img/usuarios/<%= user.image %>" alt="<%= user.lastName %>" >
+                    </div>
+                    <div class="cajaArticuloList">
+                        <h4 class="name"><%= user.firstName %> <%= user.lastName %></h4>
+                        <p class="email">Email: <%= user.email %></p>
+                        <p class="address">Domicilio: <%= user.address %></p>
+                        <p class="residencia">Pais de Residencia: <%= user.residencia %> </p>
+                        <p class="birth_date">Fecha de nacimiento: <%= user.birth_date %> </p>
+                        <p class="intereses">Equipo: <%= user.intereses %></p>
+                        </div>
+                    </div> 
+                </div>                
+            </section>
+        </section>
+
+
+    </main>
+
+        <%- include ('../partials/footer') %>
+
+</body>
+
+</html>

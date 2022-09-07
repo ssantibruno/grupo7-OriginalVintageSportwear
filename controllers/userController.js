@@ -1,7 +1,7 @@
 const fs= require('fs');
 const path= require('path');
 const { validationResult } = require('express-validator');
-let session= require ('express-session');
+let session = require ('express-session');
 let bcrypt = require ('bcryptjs');
 
 const userFilePath = path.join(__dirname, '../data/users.json');
@@ -11,9 +11,10 @@ const userController= {
     register: (req,res) =>{
         res.render('./users/register.ejs')},
 
-    createUser: (req, res, next) => {
+    createUser: (req, res) => {
         let errors = validationResult(req);
-        if (errors.isEmpty()) {        
+
+        if (errors.errors.length <= 0) {        
             let image
             if (req.files[0] != undefined){
             image=req.files[0].filename
@@ -29,7 +30,10 @@ const userController= {
         res.redirect ("/")
 
     }else{
-        return res.render('./users/register.ejs',{errors:errors.errors}) }
+        return res.render('./users/register.ejs',{
+            errors:errors.mapped(),
+            oldData: req.body
+        }) }
     },
     
     usersList: (req,res) => {
@@ -40,30 +44,29 @@ const userController= {
         res.render('./users/login.ejs')},
     
     processLogin: function (req,res) {
-        let errors = validationResult(req);
-        if (errors.isEmpty()){
-            let usuarios;
             for (let i = 0; i < usuarios.length; i++) {
             if (usuarios[i].email == req.body.email){
                 if (bcrypt.compareSync(req.body.password, usuarios[i].password)){
                     let usuarioALoguearse = usuarios[i];
                     break;
-                    }
-                }
-            }
+                    }              
+                } 
+         
             if (usuarioALoguearse == undefined) {
                 return res.render('./users/login.ejs', {errors: [{msg: 'Credenciales inválidas'}]
                 });
             }
+            req.session.userLogged = usuarioALoguearse;
+            res.render('./users/profile.ejs');
 
-            req.session.usuarioLogueado = usuarioALoguearse;
-            res.render('usuario logueado');
+        }  res.render('./users/login.ejs', {errors:errors.errors})
+        },
 
-        } else {
-            return res.render('./users/login.ejs', {errors:errors.errors})
-        }
-    }
-
+    profile: function (req, res) {
+		return res.render('./users/profile.ejs', {
+			user: req.session.userLogged
+		});
+	},
     
 };
 

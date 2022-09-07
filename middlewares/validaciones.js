@@ -1,9 +1,10 @@
 const { body } = require ('express-validator');
 
-const validaciones = [
-    body('firstName').notEmpty().withMessage("Debes colocar tu nombre").bail(),
-    body('lastName').notEmpty().withMessage("Debes colocar tu apellido").bail(),
-    body("email").isEmail().withMessage("Debes ingresar un mail valido").bail(),
-];
-
-module.exports=validaciones;
+module.exports = [
+    body('firstName').notEmpty().withMessage("Debes colocar tu nombre"),
+    body('lastName').notEmpty().withMessage("Debes colocar tu apellido"),
+    body("email")
+    .notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
+    .isEmail().withMessage("Debes ingresar un email válido"),
+    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+]
