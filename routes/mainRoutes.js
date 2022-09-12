@@ -26,9 +26,9 @@ router.get('/register', guestMiddleware, userController.register);
 router.post('/register', uploadFileUser.any(), validacionRegister, userController.createUser);
 
 router.get('/login',userController.login);
-router.post('/login', userController.processLogin);
+router.post('/login',validacionLogin, userController.processLogin);
 
-router.get('/profile', authMiddleware, userController.profile);
+router.get('/users/profile', authMiddleware, userController.profile);
 
 router.get('/usersList',userController.usersList);
 

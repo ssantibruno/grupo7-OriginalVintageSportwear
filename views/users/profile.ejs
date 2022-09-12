@@ -10,23 +10,29 @@
     
     <main>
         <section class="usuariosLista">
-            <h3>Bienvenido <%= user.firstName %> </h3>
+            <h3>Bienvenido <%= userLogged.firstName %> </h3>
 
             <section class="usuariosList">
                 <div class="tarjetaUsuario">
                     <div class="imagenUsuario">
-                        <img class="fotoUsuario" src="./img/usuarios/<%= user.image %>" alt="<%= user.lastName %>" >
+                        <img class="fotoUsuario" src="../img/usuarios/<%= userLogged.image %>" alt="<%= userLogged.lastName %>" >
                     </div>
                     <div class="cajaArticuloList">
-                        <h4 class="name"><%= user.firstName %> <%= user.lastName %></h4>
-                        <p class="email">Email: <%= user.email %></p>
-                        <p class="address">Domicilio: <%= user.address %></p>
-                        <p class="residencia">Pais de Residencia: <%= user.residencia %> </p>
-                        <p class="birth_date">Fecha de nacimiento: <%= user.birth_date %> </p>
-                        <p class="intereses">Equipo: <%= user.intereses %></p>
+                        <h4 class="name"><%= userLogged.firstName %> <%= userLogged.lastName %></h4>
+                        <p class="email">Email: <%= userLogged.email %></p>
+                        <p class="address">Domicilio: <%= userLogged.address %></p>
+                        <p class="residencia">Pais de Residencia: <%= userLogged.residencia %> </p>
+                        <p class="birth_date">Fecha de nacimiento: <%= userLogged.birth_date %> </p>
+                        <p class="intereses">Equipo: <%= userLogged.intereses %></p>
                         </div>
                     </div> 
-                </div>                
+                </div> 
+
+                <div class="cerrar-sesion">
+                    <a href="./logout"> Cerrar sesion</a>
+                </div> 
+                
+                
             </section>
         </section>
 
