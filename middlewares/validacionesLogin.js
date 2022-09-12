@@ -1,8 +1,9 @@
-const { check } = require ('express-validator');
+const { body } = require ('express-validator');
 
-const validacionLogin = [
-    check('email').isEmail().withMessage("Debes ingresar un mail valido"),
-    check('password').isLength({min:4}).withMessage('La contraseña debe tener mínimo 4 carácteres')
+module.exports = [
+        body('email')
+	        .notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
+                .isEmail().withMessage("Debes ingresar un email válido"),
+	body('password').notEmpty().withMessage('Tienes que escribir una contraseña').bail()
+                .isLength({min:4}).withMessage('debes tener un largo de 4 digitos'),    
 ]
-
-module.exports=validacionLogin;
