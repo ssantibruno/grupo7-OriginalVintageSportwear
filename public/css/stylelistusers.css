@@ -29,3 +29,7 @@
 .cajaArticuloList{
     width: 80%;
 }
+
+/* caja de error*/
+
+.text-danger{color:#810612!important}

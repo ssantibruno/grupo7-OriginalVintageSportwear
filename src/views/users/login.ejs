@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include ('../partials/head') %>
+    </head>
+    
+    <body>
+        <%- include ('../partials/header') %>
+    
+    <main>
+        
+      <form action="/login" method="POST" class="create-form">
+        <div class="form-bienvenido">
+            <p>¡Bienvenidos!</p>
+        </div>
+        <div class="items-form">
+            <label>Email:</label>
+            <input 
+                type="email" 
+                name="email" 
+                placeholder="xxxxx@mail.com" 
+                class="input"
+                value="<%= locals.oldData ? oldData.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
+        </div>
+        <div class="items-form">
+            <label>Password:</label>
+            <input 
+                type="password" 
+                name="password" 
+                placeholder="Contraseña" 
+                class="input"
+                >
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="text-danger">
+                            <%= errors.password.msg %> 
+                        </div>
+                    <% } %>
+                >
+        </div>
+ 
+        <div class="registrarse">
+            <button  class="button" type="submit" value='Iniciar Sesión'>Iniciar Sesión</button>
+        </div>
+        <div class="olvide-contraseña">
+            <a href="#">Olvide mi contraseña</a>
+        </div>
+        <div class="usuario-nuevo">
+            <a href="/users/register">No estoy registrado aún</a>
+        </div>
+
+      </form>
+
+
+    </main>
+
+        <%- include ('../partials/footer') %>
+
+</body>
+
+</html>
