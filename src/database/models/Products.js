@@ -38,7 +38,7 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     let config = {
-        tableName: 'database_OVS',
+        tableName: 'products',
         timestamps: false,
     };
 

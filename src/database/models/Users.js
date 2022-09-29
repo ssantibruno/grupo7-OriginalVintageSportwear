@@ -43,13 +43,24 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
+        role_id: {
+            type: dataTypes.INTEGER,
+            allowNull: false
+        },
     };
     let config = {
-        tableName: 'database_OVS',
+        tableName: 'users',
         timestamps: false,
     }
 
     const User = sequelize.define(alias,cols,config);
+
+    User.associate = function (models) {
+        User.belongsTo(models.Role, { 
+            as: "Role",
+            foreignKey: "role_id"
+        })
+    }
     
     return User
 };
