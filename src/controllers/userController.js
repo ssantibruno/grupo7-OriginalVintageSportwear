@@ -123,7 +123,7 @@ const userController= {
 			} else {
 				res.render('./users/login.ejs', {
                     errors: {
-                        email: {msg: 'Las credenciales son inválidas - Password Incorrecto'}
+                        password: {msg: 'Las credenciales son inválidas - Password Incorrecto'}
                     },
                     oldData: req.body
                 })
