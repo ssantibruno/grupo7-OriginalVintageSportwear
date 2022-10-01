@@ -8,7 +8,9 @@
         <%- include ('../partials/header') %>
     
         <main>
-            <section class="productList">
+            <div  class="productList">
+
+               <section >
                 <h3>Listado de productos</h3>
                 <% products.forEach (function (products){ %>
 
@@ -38,7 +40,14 @@
                 <% }) %>
 
             </section>
+        </div>
         </main>
+
+        <div class="registrarse">
+            <button>
+                <a href="./products/create" class="button" value='creacion'>Crear producto</a>
+            </button>
+        </div>
     
     </body>
     
