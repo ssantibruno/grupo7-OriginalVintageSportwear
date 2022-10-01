@@ -47,6 +47,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: false
         },
+        image:{
+            type: dataTypes.STRING(100),
+            allowNull: false
+        },
     };
     let config = {
         tableName: 'users',

@@ -23,6 +23,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(500),
             allowNull: false
         },
+        status: {
+            type: dataTypes.STRING(500),
+            allowNull: false
+        },
         condition: {
             type: dataTypes.STRING(500),
             allowNull: false
@@ -33,6 +37,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         category_id: {
             type: dataTypes.INTEGER,
+            allowNull: false
+        },
+        image:{
+            type: dataTypes.STRING(100),
             allowNull: false
         },
     };

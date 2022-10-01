@@ -18,7 +18,7 @@
         
         <section class="destacados">
             <h3>Destacados</h3>
-            <% destacados.forEach(function(product){ 
+            <% products.forEach(function(product){ 
                 let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
             %>
             <section class="articulos-nuevos">
@@ -26,8 +26,8 @@
                     <img class="imagenarticulo" src="/img/products/<%= product.image %>"" alt="<%= product.name %>" >
                     <div class="cajaArticulo">
                         <i class="fa-solid fa-truck"></i>
-                        <p class="precio"><%= product.product_price %></p>
-                        <p class="talle">talle <%= product.product_size %></p>
+                        <p class="precio"><%= product.price %></p>
+                        <p class="talle">talle <%= product.size %></p>
                         <p class="descripcion"><strong><%= product.product_name %></strong></p>
                     </div> 
                 </div>
@@ -38,7 +38,7 @@
         
         <section class="nuevos-ingresos">
             <h3>Ofertas</h3>
-            <% ofertas.forEach(function(product){ 
+            <% products.forEach(function(product){ 
                 let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
             %>
             <section class="articulos-nuevos">
@@ -46,8 +46,8 @@
                     <img class="imagenarticulo" src="/img/products/<%= product.image %>"" alt="<%= product.name %>" >
                     <div class="cajaArticulo">
                         <i class="fa-solid fa-truck"></i>
-                        <p class="precio"><%= product.product_price %></p>
-                        <p class="talle">talle <%= product.product_size %></p>
+                        <p class="precio"><%= product.price %></p>
+                        <p class="talle">talle <%= product.size %></p>
                         <p class="descripcion"><strong><%= product.product_name %></strong></p>
                     </div> 
                 </div>
