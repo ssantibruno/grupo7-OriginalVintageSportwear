@@ -13,8 +13,9 @@ const userController= require("../controllers/userController.js");
 router.get('/',mainController.index);
 router.get('/index',mainController.index);
 
-router.get('/products/list',mainController.productsList);
 
+
+/*router.get('/products/list',mainController.productsList);
 /* const storage=multer.diskStorage({
     destination: function (req, file, cb){
         cb(null, "./public/img/usuarios")  },

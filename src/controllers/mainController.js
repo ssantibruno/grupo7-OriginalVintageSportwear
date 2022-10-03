@@ -57,77 +57,26 @@ const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { promiseImpl } = require('ejs');
 
 //Aqui tienen otra forma de llamar a cada uno de los modelos
-const Categories = db.Category;
 const Products = db.Product;
-const Users = db.User;
-const Role =  db.Role;
-
 
 const mainController = {
 
+
+//dos funciones pasadas con promesa ***************************//
     index: (req,res) => {
-        db.Product.findAll()
-            .then(products => {
-                res.render('index',{products})},
-            )},
-    
-    productsList: (req, res) => {
-        db.Product.findAll()
-            .then(products => {
-                res.render('./products/productList.ejs', {products} )},
-                )},
-    
-    
+        let destacados = db.Product.findAll({where: { type: "Destacado"}});
+        let ofertas = db.Product.findAll({where: { type: "Oferta"}});
 
+        Promise.all([destacados, ofertas])
+            .then(([allDestacados, allOfertas]) => {
+                res.render('index',{allDestacados, allOfertas})})
+        },
     
-
-/* 
-    'list': (req, res) => {
-        db.Movie.findAll({
-            include: ['genre']
-        })
-            .then(movies => {
-                res.render('moviesList.ejs', {movies})
-            })
-    },
-    'detail': (req, res) => {
-        db.Movie.findByPk(req.params.id,
-            {
-                include : ['genre']
-            })
-            .then(movie => {
-                res.render('moviesDetail.ejs', {movie});
-            });
-    },
-    'new': (req, res) => {
-        db.Movie.findAll({
-            order : [
-                ['release_date', 'DESC']
-            ],
-            limit: 5
-        })
-            .then(movies => {
-                res.render('newestMovies', {movies});
-            });
-    },
-    'recomended': (req, res) => {
-        db.Movie.findAll({
-            include: ['genre'],
-            where: {
-                rating: {[db.Sequelize.Op.gte] : 8}
-            },
-            order: [
-                ['rating', 'DESC']
-            ]
-        })
-            .then(movies => {
-                res.render('recommendedMovies.ejs', {movies});
-            });
-    },
- */
 }
+ 
 
 module.exports = mainController;
 

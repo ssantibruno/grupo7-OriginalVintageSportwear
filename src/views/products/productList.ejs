@@ -30,7 +30,8 @@
                             <p class="condition"> Condicion: <%= product.condition %> </p>
                             </div>
                             <div class="caja2listproducts">
-                            <p class="category"> Categoria: <%= product.category %></p>
+                            <p class="category"> Categoria: <%= product.categories.category_name %></p>
+                                                             <!-- producto. "alias" . columna -->
                             <p class="type"> Tipo: <%= product.type %></p>
                             <p class="seleccion-status"> Status: <%= product.status %></p>
                             </div>
@@ -45,7 +46,7 @@
 
         <div class="registrarse">
             <button>
-                <a href="./products/create" class="button" value='creacion'>Crear producto</a>
+                <a href="./create" class="button" value='creacion'>Crear producto</a>
             </button>
         </div>
     

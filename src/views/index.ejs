@@ -18,7 +18,7 @@
         
         <section class="destacados">
             <h3>Destacados</h3>
-            <% products.forEach(function(product){ 
+            <% allDestacados.forEach(function(product){ 
                 let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
             %>
             <section class="articulos-nuevos">
@@ -38,7 +38,7 @@
         
         <section class="nuevos-ingresos">
             <h3>Ofertas</h3>
-            <% products.forEach(function(product){ 
+            <% allOfertas.forEach(function(product){ 
                 let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
             %>
             <section class="articulos-nuevos">

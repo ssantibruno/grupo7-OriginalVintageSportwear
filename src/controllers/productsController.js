@@ -1,4 +1,4 @@
-const fs= require('fs');
+/* const fs= require('fs');
 const path= require('path');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -74,4 +74,45 @@ const productsController={
     }
 
 }
- module.exports = productsController;
+ module.exports = productsController; */
+
+
+ ///********************Productos***********/
+
+
+ const path = require('path');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
+//Aqui tienen otra forma de llamar a cada uno de los modelos
+const Categories = db.Category;
+const Products = db.Product;
+const Users = db.User;
+const Role =  db.Role;
+
+
+const productsController = {
+
+    productsList: (req, res) => {
+    db.Product.findAll({
+        include: ['categories']})
+        .then(products => {
+            res.render('./products/productList.ejs', {products} )},
+            )},
+
+    selecciones: (req,res) => {
+            db.Product.findAll({
+                    where: { category_id: 1}})
+                    .then(selecciones => { 
+                        res.render('./products/selecciones.ejs',{selecciones}) });
+        },
+
+
+        
+    }
+
+        module.exports = productsController;
+        
+         
+
