@@ -108,8 +108,36 @@ const productsController = {
                         res.render('./products/selecciones.ejs',{selecciones}) });
         },
 
+    restoDelMundo: (req,res) => {
+            db.Product.findAll({
+                    where: { category_id: 4}})
+                    .then(restoDelMundo => { 
+                        res.render('./products/restoDelMundo.ejs',{restoDelMundo}) });
+        },  
+    
+        equiposAmericanos: (req,res) => {
+            db.Product.findAll({
+                    where: { category_id: 2}})
+                    .then(equiposAmericanos => { 
+                        res.render('./products/equiposAmericanos.ejs',{equiposAmericanos}) });
+        },  
 
-        
+        equiposEuropeos: (req,res) => {
+            db.Product.findAll({
+                    where: { category_id: 3}})
+                    .then(equiposEuropeos => { 
+                        res.render('./products/equiposEuropeos.ejs',{equiposEuropeos}) });
+        },  
+
+        detail: (req, res) => {
+            db.Product.findByPk(req.params.id,{
+                include: ['categories']})
+                .then(product => {
+                    res.render('./products/productDetail.ejs', {product});
+                });
+        },
+
+
     }
 
         module.exports = productsController;

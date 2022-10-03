@@ -35,11 +35,6 @@ router.get('/users/profile', authMiddleware, userController.profile);
 
 router.get('/usersList',userController.usersList);
 
-
-router.get('/selecciones',mainController.selecciones);
-router.get('/restoDelMundo',mainController.restoDelMundo);
-router.get('/equiposAmericanos',mainController.equiposAmericanos);
-router.get('/equiposEuropeos',mainController.equiposEuropeos);
 router.get('/productCar',mainController.productCar); */
 
 

@@ -15,7 +15,10 @@ const uploadFileProducts = multer ({storage});
 
 router.get('/list',productsController.productsList);
 router.get('/selecciones',productsController.selecciones);
-
+router.get('/restoDelMundo',productsController.restoDelMundo);
+router.get('/equiposAmericanos',productsController.equiposAmericanos);
+router.get('/equiposEuropeos',productsController.equiposEuropeos);
+router.get('/detail/:id', productsController.detail);
 
 
 /* router.get('/', productsController.index);

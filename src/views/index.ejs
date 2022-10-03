@@ -23,7 +23,9 @@
             %>
             <section class="articulos-nuevos">
                 <div class="articulo">
-                    <img class="imagenarticulo" src="/img/products/<%= product.image %>"" alt="<%= product.name %>" >
+                    <a href="/products/detail/<%=product.id%>">
+                        <img class="imagenarticulo" src="/img/products/<%= product.image %>"" alt="<%= product.name %>" >
+                    </a>
                     <div class="cajaArticulo">
                         <i class="fa-solid fa-truck"></i>
                         <p class="precio"><%= product.price %></p>
@@ -43,7 +45,9 @@
             %>
             <section class="articulos-nuevos">
                 <div class="articulo">
+                    <a href="/products/detail/<%=product.id%>">
                     <img class="imagenarticulo" src="/img/products/<%= product.image %>"" alt="<%= product.name %>" >
+                    </a>
                     <div class="cajaArticulo">
                         <i class="fa-solid fa-truck"></i>
                         <p class="precio"><%= product.price %></p>

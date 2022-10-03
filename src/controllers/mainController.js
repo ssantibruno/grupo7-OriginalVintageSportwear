@@ -63,8 +63,6 @@ const { promiseImpl } = require('ejs');
 const Products = db.Product;
 
 const mainController = {
-
-
 //dos funciones pasadas con promesa ***************************//
     index: (req,res) => {
         let destacados = db.Product.findAll({where: { type: "Destacado"}});
