@@ -11,28 +11,27 @@
     <main>
             <div class="divCreateProduct">
                 <div>
-                    <h2 class="createProductTitle">Editar Producto <%=productToEdit.id%> </h2>
+                    <h2 class="createProductTitle">Editar Producto <%=product.id%> </h2>
                 </div>
-                <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" style="display:inline-flex">
+                <form action="/products/edit/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" style="display:inline-flex">
                 <div class="caja-editar-poducto">        
                     <div class="control-registro-name">
                         <label for="name" class="form-label">Nombre del producto:</label>
-                        <input type="text" name="product_name" placeholder="<%= productToEdit.product_name %>">
+                        <input type="text" name="product_name" placeholder="<%= product.product_name %>">
                     </div>
                     <div class="control-registro-description">
                         <label for="description" class="form-label">Descripción del producto:</label>
-                        <input type="text" name="description_name" placeholder="<%= productToEdit.description_name %>">
+                        <input type="text" name="description" placeholder="<%= product.description %>">
                     </div>
                     <div class="caja-ingreso">
                         <div class="control-registro">
                             <label for="category" class="form-label">Categoria del producto:</label>
                             <div class="seleccion-status">
-                                <select name="category">
-                                    <option value=".">..</option>
-                                    <option value="Seleccion">Selecciones</option>
-                                    <option value="EquiposAmericanos">Equipos Americanos</option>
-                                    <option value="EquiposEuropeos">Equipos Europeos</option>
-                                    <option value="RestoDelMundo">Resto del Mundo</option>
+                                <select name="category_id" id="" required>
+                                    <option value="" disabled selected>- Seleccione una categoria - </option>
+                                    <% categorias.forEach(category => { %>
+                                    <option value="<%= category.id %>"><%= category.category_name %></option>
+                                    <% }); %>
                                 </select>
                             </div>
                         </div>
@@ -50,7 +49,7 @@
                     <div class="caja-ingreso">
                         <div class="control-registro">
                             <label for="size" class="form-label">Talle del producto:</label>
-                            <select name="product_size">
+                            <select name="size">
                                 <option value=".">..</option>
                                 <option value="S">S</option>
                                 <option value="M">M</option>
@@ -82,13 +81,13 @@
                         </div>
                         <div class="control-registro">
                             <label for="price" class="form-label">Precio del producto:</label>
-                            <input type="text" name="product_price" placeholder="<%= productToEdit.product_price %>">
+                            <input type="text" name="price" placeholder="<%= product.price %>">
                         </div>
                     </div>
     
                     <div class="control-registro">
                         <label for="img" class="form-label">Imagen del producto:</label>
-                        <input type="file" accept="image/png, image/jpg, image/jpeg" name="product_img" class="product_imageFile">
+                        <input type="file" accept="image/png, image/jpg, image/jpeg" name="image"  class="product_imageFile">
                     </div>
     
                     <div class="caja-boton-anadir">
