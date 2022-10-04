@@ -8,29 +8,32 @@
         <%- include ('../partials/header') %>
     
         <main>
-            <section class="productList">
+            <div  class="productList">
+
+               <section >
                 <h3>Listado de productos</h3>
-                <% products.forEach (function (products){ %>
+                <% products.forEach (function (product){ %>
 
                 <section class="articulosList">
                     <div class="articuloList">
                         <div class="cajaImagenList">
-                            <a href="/products/detail/<%=products.id%>">
-                            <img class="imagenarticuloList" src="./img/products/<%= products.image %>" alt="<%= products.product_name %>" >
+                            <a href="/products/detail/<%=product.id%>">
+                            <img class="imagenarticuloList" src="../img/products/<%= product.image %>" alt="<%= product.product_name %>" >
                             </a>
                         </div>
                         <div class="cajaArticuloList">
-                            <h4 class="product_name"> <%= products.product_name %> </h4>
-                            <p class="descripcion"> Descripcion: <%= products.description_name %></p>
+                            <h4 class="product_name"> <%= product.product_name %> </h4>
+                            <p class="descripcion"> Descripcion: <%= product.description %></p>
                             <div class="caja2listproducts">
-                            <p class="precio">Precio: $<%= products.product_price %></p>
-                            <p class="talle"> Talle: <%= products.product_size %> </p>
-                            <p class="condition"> Condicion: <%= products.condition %> </p>
+                            <p class="precio">Precio: $<%= product.price %></p>
+                            <p class="talle"> Talle: <%= product.size %> </p>
+                            <p class="condition"> Condicion: <%= product.condition %> </p>
                             </div>
                             <div class="caja2listproducts">
-                            <p class="category"> Categoria: <%= products.category %></p>
-                            <p class="type"> Tipo: <%= products.type %></p>
-                            <p class="seleccion-status"> Status: <%= products.status %></p>
+                            <p class="category"> Categoria: <%= product.categories.category_name %></p>
+                                                             <!-- producto. "alias" . columna -->
+                            <p class="type"> Tipo: <%= product.type %></p>
+                            <p class="seleccion-status"> Status: <%= product.status %></p>
                             </div>
                         </div> 
                     </div>                
@@ -38,7 +41,14 @@
                 <% }) %>
 
             </section>
+        </div>
         </main>
+
+        <div class="registrarse">
+            <button>
+                <a href="./create" class="button" value='creacion'>Crear producto</a>
+            </button>
+        </div>
     
     </body>
     

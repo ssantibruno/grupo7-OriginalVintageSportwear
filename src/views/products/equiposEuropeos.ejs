@@ -18,16 +18,18 @@
         
         <section class="nuevos-ingresos">
             <h3>Equipos Europeos</h3>
-            <% equipoEur.forEach(function(product){ 
+            <% equiposEuropeos.forEach(function(product){ 
                 let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
             %>
             <section class="articulos-nuevos">
                 <div class="articulo">
-                    <img class="imagenarticulo" src="/img/products/<%= product.image %>"" alt="<%= product.name %>" >
-                    <div class="cajaArticulo">
+                    <a href="/products/detail/<%=product.id%>">
+                        <img class="imagenarticulo" src="/img/products/<%= product.image %>"" alt="<%= product.name %>" >
+                    </a>
+                   <div class="cajaArticulo">
                         <i class="fa-solid fa-truck"></i>
-                        <p class="precio"><%= product.product_price %></p>
-                        <p class="talle">talle <%= product.product_size %></p>
+                        <p class="precio"><%= product.price %></p>
+                        <p class="talle">talle <%= product.size %></p>
                         <p class="descripcion"><strong><%= product.product_name %></strong></p>
                     </div> 
                 </div>
