@@ -5,7 +5,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
-            autoIncrement: true
+            autoIncrement: true,
+            unique: true
         },
         product_name: {
             type: dataTypes.STRING(500),
@@ -41,7 +42,6 @@ module.exports = (sequelize, dataTypes) => {
         },
         image:{
             type: dataTypes.STRING(100),
-            allowNull: false
         },
     };
 

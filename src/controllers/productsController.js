@@ -95,8 +95,7 @@ const Role =  db.Role;
 const productsController = {
 
     productsList: (req, res) => {
-    db.Product.findAll({
-        include: ['categories']})
+    db.Product.findAll({include: ['categories']})
         .then(products => {
             res.render('./products/productList.ejs', {products} )},
             )},
@@ -136,6 +135,35 @@ const productsController = {
                     res.render('./products/productDetail.ejs', {product});
                 });
         },
+
+        createForm: (req, res) => {
+            db.Category.findAll()
+            .then(categorias => {
+            res.render('./products/productCreateForm.ejs', {categorias})
+        })
+        },
+
+        createNewProduct: (req, res) => {
+            db.Product.create(
+            {
+                product_name: req.body.product_name,
+                description: req.body.description,
+                price: req.body.price,
+                size: req.body.size,
+                status: req.body.status,
+                category_id: req.body.category_id,
+                condition: req.body.condition,
+                type: req.body.type,
+                image: req.file ? req.file.filename : 'default-product-image.jpg',
+            }
+        )
+        .then(()=> {
+            return res.redirect('./list')})            
+        .catch(error => res.send(error))
+    },
+
+
+
 
 
     }

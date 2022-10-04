@@ -23,7 +23,11 @@ const authMiddleware = require ('../middlewares/authMiddleware.js');
 
 /****Rutas /USERS/..******** */
 
+router.get('/list',userController.list);
 router.get('/register', guestMiddleware, userController.register);
+router.get('/login',guestMiddleware, userController.login);
+
+/*
 router.post('/register', uploadFileUser.any(), validacionRegister, userController.createUser);
 
 router.get('/login',guestMiddleware, userController.login);
@@ -31,11 +35,8 @@ router.post('/login', userController.processLogin);
 
 router.get('/profile', authMiddleware, userController.profile);
 
-router.get('/list',userController.usersList);
-
-/* GET - /users/logout */
 router.get('/logout', userController.logout);
-
+ */
 
 module.exports = router;
 
