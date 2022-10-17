@@ -15,7 +15,7 @@
             <section class="usuariosList">
                 <div class="tarjetaUsuario">
                     <div class="imagenUsuario">
-                        <img class="fotoUsuario" src="../img/usuarios/<%= userLogged.image %>" alt="<%= userLogged.lastName %>" >
+                        <img class="fotoUsuario" src="/img/usuarios/<%= userLogged.image %>" alt="<%= userLogged.lastName %>" >
                     </div>
                     <div class="cajaArticuloList">
                         <h4 class="name"><%= userLogged.firstName %> <%= userLogged.lastName %></h4>
@@ -24,18 +24,18 @@
                         <p class="residencia">Pais de Residencia: <%= userLogged.residencia %> </p>
                         <p class="birth_date">Fecha de nacimiento: <%= userLogged.birth_date %> </p>
                         <p class="intereses">Equipo: <%= userLogged.intereses %></p>
-                        </div>
-                    </div> 
+                    </div>
+                </div> 
                 </div> 
                 <div class="registrarse">
                     <button>
-                        <a href="./list" class="button" value='userList'>Listado de Usuarios</a>
+                        <a href="../list" class="button" value='userList'>Listado de Usuarios</a>
                     </button>
                 </div>
 
                 <div class="registrarse">
                     <button>
-                        <a href="./logout" class="button" value='cerrarSesion'>Cerrar Sesión</a>
+                        <a href="../logout" class="button" value='cerrarSesion'>Cerrar Sesión</a>
                     </button>
                 </div> 
                 

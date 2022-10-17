@@ -162,6 +162,10 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const { promiseImpl } = require('ejs');
 
+const { validationResult } = require('express-validator');
+let session = require ('express-session');
+let bcrypt = require ('bcryptjs');
+
 //Aqui tienen otra forma de llamar a cada uno de los modelos
 const Categories = db.Category;
 const Products = db.Product;
@@ -182,7 +186,95 @@ const userController = {
 	login: (req, res) => {
 			res.render('./users/login.ejs' )},
 
+	createUser: (req, res) => {
+		let errors = validationResult(req);
 
+		if (errors.errors.length <= 0) { 
+		db.User.create(
+            {
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
+                email: req.body.email,
+                address: req.body.address,
+                residencia: req.body.residencia,
+                birth_date: req.body.birth_date,
+                intereses: req.body.intereses,
+				password: bcrypt.hashSync(req.body.password,10),
+                notificaciones: req.body.notificaciones,
+                role_id: req.body.role_id,
+				image: req.file ? req.file.filename : 'fotodefault.png',
+            }
+        )
+		.then((userLogged)=> {
+			         // Setear en session el ID del usuario nuevo para auto loguearlo
+					 req.session.userId = user.id;
+					 // Setear la cookie para mantener al usuario logueado
+					 res.cookie('userCookie', user.id, { maxAge: 60000 * 60 });
+ 			res.redirect('./profile', {userLogged})})          
+        .catch(error => res.send(error))
+     }else{
+		return res.render('./users/register.ejs',{
+		            errors:errors.mapped(),
+		            oldData: req.body
+		         }) }
+	},
+
+	profile: (req, res) => {
+		let userId= req.params.id
+
+		db.User.findByPk(userId, {include: ['role']})
+			.then(userLogged => {
+				res.redirect('./users/profile', {userLogged});
+			})
+		},
+	 
+	processLogin:  (req,res) => {
+			// Buscar usuario por email
+		db.User.findOne({
+			where: {email: req.body.email}})
+			.then(userLogged => { 
+		
+		// Si encontramos al usuario
+		if (userLogged != undefined) {
+		// Al ya tener al usuario, comparamos las contraseñas
+		if (bcrypt.compareSync(req.body.password, userLogged.password)) {
+			// Setear en session el ID del usuario
+			req.session.userId = userLogged.id;
+			
+			// Setear la cookie
+			if (req.body.remember_user) {
+			res.cookie('userCookie', userLogged.id, { maxAge: 60000 * 60 });
+			}
+			
+			// Redireccionamos al visitante a su perfil
+			return res.redirect('./users/profile.ejs', {userLogged} );
+			} else {
+			res.render('./users/login.ejs', {
+			errors: {password: {msg: 'Las credenciales son inválidas - Password Incorrecto'}
+			                   },
+			oldData: req.body
+			})
+			}
+			} else {
+			res.render('./users/login.ejs', {
+			errors: {
+			email: { msg: 'No se encuentra este email en nuestra base de datos'
+			},
+			oldData: req.body
+			}
+			});
+			}
+			}
+			)},
+	 
+	logout: (req, res) => {
+		// Destruir la session
+		req.session.destroy();
+		// Destruir la cookie
+		res.cookie('userCookie', null, { maxAge: 1 });
+						
+			return res.redirect('../../index');
+		}
 	
     
 }
