@@ -36,7 +36,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         password: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(500),
             allowNull: false
         },
         notificaciones: {

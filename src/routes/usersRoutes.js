@@ -31,7 +31,7 @@ router.post('/register', uploadFileUser.single('image'), validacionRegister, use
 router.get('/login',guestMiddleware, userController.login);
 router.post('/login', userController.processLogin);
 
-router.get('/profile/:id', authMiddleware, userController.profile);
+router.get('/profile', authMiddleware, userController.profile);
 /*router.get('/profile', authMiddleware, userController.profile);*/
 
 router.get('/logout', userController.logout);
