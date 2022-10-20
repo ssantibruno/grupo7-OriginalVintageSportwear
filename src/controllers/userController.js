@@ -156,7 +156,7 @@
 
 ///**********************CRUD CON MODELSS */
 
-const path = require('path');
+const path = require ('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
@@ -229,39 +229,67 @@ const userController = {
 			})
 		},
 
-		
-	processLogin:  (req,res) => {
+		processLogin: (req, res) => {
+			db.User.findOne({where: {email: req.body.email}})
+
+			.then(userToLogin => {
+				if (userToLogin != null){
+				console.log(userToLogin.dataValues.password)
+				console.log(req.body.password)
+				
+				let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.dataValues.password);
+				console.log(isOkThePassword)
+					
+				if(isOkThePassword) {
+					
+					req.session.userLogged = userToLogin;
+					res.cookie('userCookie', userToLogin.id, { maxAge: (1000 * 60) * 60 });
+						
+					return res.redirect('/users/profile');
+					} 
+					return res.render('./users/login.ejs', {
+						errors: {password: {msg: 'Las credenciales son inválidas - Password Incorrecto'},},
+						oldData: req.body
+						});
+					}	
+				return res.render('./users/login.ejs', {
+						errors: {email: { msg: 'No se encuentra este email en nuestra base de datos'}},
+						oldData: req.body
+						});
+					} ) },
+
+/* 	processLogin:  (req,res) => {
 		//buscar usuario por mail
-		let userLogged = db.User.findOne({
-			where: {email: req.body.email}})
+		db.User.findOne({where: {email: req.body.email}})
 
+			.then(userToLogged => {
+				console.log(userToLogged)
+				if (userToLogged != null) {
 
-
-		if(userLogged) {
-			let userOkPassword = bcrypt.compareSync('req.body.password', userLogged.password);
-			if (userOkPassword) {
-				delete userLogged.password;
-				req.session.userLogged = userLogged;
-
-				if(req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				let userOkPassword = bcrypt.compareSync (req.body.password, userToLogged.password);
+				
+				if (userOkPassword) {
+						
+				req.session.userLogged = userToLogged.id;
+				res.cookie('userCookie', userToLogged.id, { maxAge: 60000 * 60 });
+				res.redirect('/users/profile');
 				}
-			res.redirect('/users/profile');
-			}
-			return res.render('./users/login.ejs', {
-				errors: {password: {msg: 'Las credenciales son inválidas - Password Incorrecto'}
+				else {				
+				res.render('./users/login.ejs', {
+						errors: {password: {msg: 'Las credenciales son inválidas - Password Incorrecto'},},
+						oldData: req.body
+						});
+				};
+			
+				}else{
+				return res.render('./users/login.ejs', {
+					errors: {email: { msg: 'No se encuentra este email en nuestra base de datos'}},
+					oldData: req.body
+					});
 				}
-			});
-		}
-		return res.render('./users/login.ejs', {
-			errors: {
-				email: { msg: 'No se encuentra este email en nuestra base de datos'
-				},
-				oldData: req.body
-				}
-			});
-		},
-
+				})
+				.catch(error => res.send(error))
+	}, */
 
 	 
 	logout: (req, res) => {
