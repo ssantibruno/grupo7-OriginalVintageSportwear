@@ -18,10 +18,11 @@
         
         <section class="nuevos-ingresos">
             <h3>Resto del Mundo</h3>
+            <section class="articulos-nuevos">
             <% restoDelMundo.forEach(function(product){ 
                 let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
             %>
-            <section class="articulos-nuevos">
+            
                 <div class="articulo">
                     <a href="/products/detail/<%=product.id%>">
                         <img class="imagenarticulo" src="/img/products/<%= product.image %>"" alt="<%= product.name %>" >
@@ -34,8 +35,9 @@
                     </div> 
                 </div>
             
-            </section>
+            
             <% }) %>
+        </section>
         </section>
         <%- include ('../partials/newsletter') %>
     </main>

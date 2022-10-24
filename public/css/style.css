@@ -309,13 +309,15 @@ main h3{
 .nuevos-ingresos, .destacados{
     margin: 10px;
     padding: 10px;
-    }
+     }
 
 h3 {
     border-bottom: 2px solid black;
 }
 
-.articulos-nuevos, .articulos-destacados{
+section .articulos-nuevos, .articulos-destacados{
+    display:flex;
+    flex-wrap: wrap;
     margin-top: 15px;
 }
  

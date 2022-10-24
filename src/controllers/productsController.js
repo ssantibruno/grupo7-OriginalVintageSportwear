@@ -102,28 +102,32 @@ const productsController = {
 
     selecciones: (req,res) => {
         db.Product.findAll({
-                    where: { category_id: 1}})
+                    where: { category_id: 1},
+                    limit:8})
                     .then(selecciones => { 
                         res.render('./products/selecciones.ejs',{selecciones}) });
         },
 
     restoDelMundo: (req,res) => {
         db.Product.findAll({
-                    where: { category_id: 4}})
+                    where: { category_id: 4},
+                    limit:8})
                     .then(restoDelMundo => { 
                         res.render('./products/restoDelMundo.ejs',{restoDelMundo}) });
         },  
     
     equiposAmericanos: (req,res) => {
             db.Product.findAll({
-                    where: { category_id: 2}})
+                    where: { category_id: 2},
+                    limit:8})
                     .then(equiposAmericanos => { 
                         res.render('./products/equiposAmericanos.ejs',{equiposAmericanos}) });
         },  
 
     equiposEuropeos: (req,res) => {
         db.Product.findAll({
-                    where: { category_id: 3}})
+                    where: { category_id: 3},
+                    limit:8})
                     .then(equiposEuropeos => { 
                         res.render('./products/equiposEuropeos.ejs',{equiposEuropeos}) });
         },  

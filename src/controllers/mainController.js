@@ -65,8 +65,12 @@ const Products = db.Product;
 const mainController = {
 //dos funciones pasadas con promesa ***************************//
     index: (req,res) => {
-        let destacados = db.Product.findAll({where: { type: "Destacado"}});
-        let ofertas = db.Product.findAll({where: { type: "Oferta"}});
+        let destacados = db.Product.findAll({
+            where: { type: "Destacado"},
+            limit:8});
+        let ofertas = db.Product.findAll({
+            where: { type: "Oferta"},
+            limit:8});
 
         Promise.all([destacados, ofertas])
             .then(([allDestacados, allOfertas]) => {
