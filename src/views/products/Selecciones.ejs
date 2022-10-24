@@ -18,22 +18,33 @@
         
         <section class="nuevos-ingresos">
             <h3>Selecciones</h3>
+            <section class="articulos-nuevos">
                 <% selecciones.forEach(function(product){ 
                     let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
                 %>
-                <section class="articulos-nuevos">
-                    <div class="articulo">
-                        <img class="imagenarticulo" src="/img/products/<%= product.image %>"" alt="<%= product.name %>" >
-                        <div class="cajaArticulo">
-                            <i class="fa-solid fa-truck"></i>
-                            <p class="precio"><%= product.product_price %></p>
-                            <p class="talle">talle <%= product.product_size %></p>
-                            <p class="descripcion"><strong><%= product.product_name %></strong></p>
-                        </div> 
-                    </div>
                 
-                </section>
+                <div class="articulo">
+                    <div class="cajaImagenArticulo">
+                        <a href="/products/detail/<%=product.id%>">
+                        <img class="imagenarticulo" src="/img/products/<%= product.image %>"" alt="<%= product.name %>" >
+                        </a>
+                    </div>
+
+                    <div class="cajaArticulo">
+                        <div class="cajanombre">
+                            <p class="nombre"><strong><%= product.product_name %></strong></p>
+                        </div>
+                        <div class="cajadetalle">
+                            <p class="precio">$ <%= product.price %>.00</p>
+                            <br>
+                            <i class="fa fa-shopping-cart"></i>
+                        </div>
+                    </div> 
+                </div>
+                
+                
                 <% }) %>
+            </section>
          </section>
 
         

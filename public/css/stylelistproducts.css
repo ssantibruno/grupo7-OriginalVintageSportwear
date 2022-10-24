@@ -1,3 +1,9 @@
+.productList section h3{
+    margin-top: 15px;
+    padding-top: 25px;
+    font-size: 30px;
+}
+
 .articulosList{
     margin: 15px;
 }
