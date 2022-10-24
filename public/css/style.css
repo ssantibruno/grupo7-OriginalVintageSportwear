@@ -329,21 +329,45 @@ section .articulos-nuevos, .articulos-destacados{
     margin-bottom: 15px;
     border: solid 1px #3b3939 ;
     box-shadow: 2px 2px 5px black;
+    height: 370px;
 }
-.cajaArticulo{
-    width: 100%;
-    border: solid 2px #ebebeb;
-    padding: 15px;
-    box-sizing: border-box;
+
+.cajaImagenArticulo{
     display: flex;
-    flex-wrap:wrap;
-    position: relative;
+    align-items: center;
+    justify-content: center;
+       
 }
 
 .imagenarticulo{
+    height: 300px;
     width: 100%;
+    display:flex
 }
 
+.cajaArticulo{
+    width: 100%;
+    height: 60px;
+    border: solid 2px #ebebeb;
+    padding: 2px;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 14px;
+    display: flex;
+}
+
+.cajanombre{
+    display: flex;
+    padding: 5px;
+    width: 75%;
+    font-size: 20px;
+}
+.cajadetalle{
+    text-align: right;
+    align-items: center;
+    padding: 2px;
+    font-size: 14px;
+}
 
 .newsletter{
     background-color: rgb(44, 39, 39);
