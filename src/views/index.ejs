@@ -18,6 +18,7 @@
         
         <section class="destacados">
             <h3>Destacados</h3>
+<<<<<<< HEAD
             <section class="articulos-nuevos" >
             <% allDestacados.forEach(function(product){ 
                 let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
@@ -43,10 +44,29 @@
             <% }) %>
             </section>
             
+=======
+            <% destacados.forEach(function(product){ 
+                let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+            %>
+            <section class="articulos-nuevos">
+                <div class="articulo">
+                    <img class="imagenarticulo" src="/img/products/<%= product.image %>"" alt="<%= product.name %>" >
+                    <div class="cajaArticulo">
+                        <i class="fa-solid fa-truck"></i>
+                        <p class="precio"><%= product.product_price %></p>
+                        <p class="talle">talle <%= product.product_size %></p>
+                        <p class="descripcion"><strong><%= product.product_name %></strong></p>
+                    </div> 
+                </div>
+            
+            </section>
+            <% }) %>
+>>>>>>> master
         </section>
         
         <section class="nuevos-ingresos">
             <h3>Ofertas</h3>
+<<<<<<< HEAD
             <section class="articulos-nuevos">
             <% allOfertas.forEach(function(product){ 
                 let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
@@ -72,6 +92,24 @@
             
             <% }) %>
             </section>
+=======
+            <% ofertas.forEach(function(product){ 
+                let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+            %>
+            <section class="articulos-nuevos">
+                <div class="articulo">
+                    <img class="imagenarticulo" src="/img/products/<%= product.image %>"" alt="<%= product.name %>" >
+                    <div class="cajaArticulo">
+                        <i class="fa-solid fa-truck"></i>
+                        <p class="precio"><%= product.product_price %></p>
+                        <p class="talle">talle <%= product.product_size %></p>
+                        <p class="descripcion"><strong><%= product.product_name %></strong></p>
+                    </div> 
+                </div>
+            
+            </section>
+            <% }) %>
+>>>>>>> master
         </section>
 
         <%- include ('./partials/newsletter') %>

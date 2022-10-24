@@ -13,6 +13,7 @@ const storage=multer.diskStorage({
 
 const uploadFileProducts = multer ({storage});
 
+<<<<<<< HEAD
 router.get('/list',productsController.productsList);
 router.get('/selecciones',productsController.selecciones);
 router.get('/restoDelMundo',productsController.restoDelMundo);
@@ -27,6 +28,19 @@ router.get('/edit/:id',productsController.productEditForm);
 router.patch('/edit/:id',uploadFileProducts.single('image'), productsController.productUpdate);
 
 router.delete('/delete/:id',productsController.productDestroy); 
+=======
+router.get('/', productsController.index);
+
+router.get('/create',productsController.productCreateForm);
+router.post('/',uploadFileProducts.any(), productsController.productStore);
+
+router.get('/detail/:id', productsController.productDetail);
+
+router.get('/edit/:id',productsController.productEditForm);
+router.patch('/edit/:id',uploadFileProducts.any(), productsController.productUpdate);
+
+router.delete('/delete/:id',productsController.productDestroy);
+>>>>>>> master
 
 
 

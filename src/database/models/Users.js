@@ -19,7 +19,11 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
+<<<<<<< HEAD
         address: {
+=======
+        adress: {
+>>>>>>> master
             type: dataTypes.STRING(100),
             allowNull: false
         },
@@ -36,7 +40,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         password: {
+<<<<<<< HEAD
             type: dataTypes.STRING(500),
+=======
+            type: dataTypes.STRING(100),
+>>>>>>> master
             allowNull: false
         },
         notificaciones: {
@@ -47,10 +55,13 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: false
         },
+<<<<<<< HEAD
         image:{
             type: dataTypes.STRING(100),
             allowNull: false
         },
+=======
+>>>>>>> master
     };
     let config = {
         tableName: 'users',
@@ -61,7 +72,11 @@ module.exports = (sequelize, dataTypes) => {
 
     User.associate = function (models) {
         User.belongsTo(models.Role, { 
+<<<<<<< HEAD
             as: "role",
+=======
+            as: "Role",
+>>>>>>> master
             foreignKey: "role_id"
         })
     }

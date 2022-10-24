@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 module.exports = {
+=======
+{
+>>>>>>> master
   "development": {
     "username": "root",
     "password": null,
