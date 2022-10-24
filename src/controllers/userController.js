@@ -235,7 +235,7 @@ const userController = {
 			.then(userToLogin => {
 				if (userToLogin != null){
 				console.log(userToLogin.dataValues.password)
-				console.log(req.body.password)
+				console.log(bcrypt.hashSync(req.body.password,10))
 				
 				let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.dataValues.password);
 				console.log(isOkThePassword)
