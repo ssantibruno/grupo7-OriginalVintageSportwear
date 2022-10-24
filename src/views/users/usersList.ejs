@@ -11,20 +11,20 @@
         <main>
             <section class="usuariosLista">
                 <h3>Listado de Usuarios</h3>
-                <% usuarios.forEach (function (usuarios){ %>
+                <% users.forEach (function (user){ %>
 
                 <section class="usuariosList">
                     <div class="tarjetaUsuario">
                         <div class="imagenUsuario">
-                            <img class="fotoUsuario" src="../img/usuarios/<%= usuarios.image %>" alt="<%= usuarios.lastName %>" >
+                            <img class="fotoUsuario" src="../img/usuarios/<%=user.image %>" alt="<%= user.lastName %>" >
                         </div>
                         <div class="cajaArticuloList">
-                            <h4 class="name"><%= usuarios.firstName %> <%= usuarios.lastName %></h4>
-                            <p class="email">Email: <%= usuarios.email %></p>
-                            <p class="address">Domicilio: <%= usuarios.address %></p>
-                            <p class="residencia">Pais de Residencia: <%= usuarios.residencia %> </p>
-                            <p class="birth_date">Fecha de nacimiento: <%= usuarios.birth_date %> </p>
-                            <p class="intereses">Equipo: <%= usuarios.intereses %></p>
+                            <h4 class="name"><%= user.firstName %> <%= user.lastName %></h4>
+                            <p class="email">Email: <%= user.email %></p>
+                            <p class="address">Domicilio: <%= user.address %></p>
+                            <p class="residencia">Pais de Residencia: <%= user.residencia %> </p>
+                            <p class="birth_date">Fecha de nacimiento: <%= user.birth_date %> </p>
+                            <p class="intereses">Equipo: <%= user.intereses %></p>
                             </div>
                         </div> 
                     </div>                

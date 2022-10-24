@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        adress: {
+        address: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
@@ -36,7 +36,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         password: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(500),
             allowNull: false
         },
         notificaciones: {
@@ -45,6 +45,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         role_id: {
             type: dataTypes.INTEGER,
+            allowNull: false
+        },
+        image:{
+            type: dataTypes.STRING(100),
             allowNull: false
         },
     };
@@ -57,7 +61,7 @@ module.exports = (sequelize, dataTypes) => {
 
     User.associate = function (models) {
         User.belongsTo(models.Role, { 
-            as: "Role",
+            as: "role",
             foreignKey: "role_id"
         })
     }

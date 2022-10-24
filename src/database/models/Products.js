@@ -5,7 +5,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
-            autoIncrement: true
+            autoIncrement: true,
+            unique: true
         },
         product_name: {
             type: dataTypes.STRING(500),
@@ -23,6 +24,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(500),
             allowNull: false
         },
+        status: {
+            type: dataTypes.STRING(500),
+            allowNull: false
+        },
         condition: {
             type: dataTypes.STRING(500),
             allowNull: false
@@ -35,6 +40,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             allowNull: false
         },
+        image:{
+            type: dataTypes.STRING(100),
+        },
     };
 
     let config = {
@@ -46,7 +54,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Product.associate = function (models) {
         Product.belongsTo(models.Category, { 
-            as: "Categories",
+            as: "categories",
             foreignKey: "category_id"
         })
 
