@@ -102,38 +102,7 @@ const userController = {
 						});
 					} ) },
 
-/* 	processLogin:  (req,res) => {
-		//buscar usuario por mail
-		db.User.findOne({where: {email: req.body.email}})
 
-			.then(userToLogged => {
-				console.log(userToLogged)
-				if (userToLogged != null) {
-
-				let userOkPassword = bcrypt.compareSync (req.body.password, userToLogged.password);
-				
-				if (userOkPassword) {
-						
-				req.session.userLogged = userToLogged.id;
-				res.cookie('userCookie', userToLogged.id, { maxAge: 60000 * 60 });
-				res.redirect('/users/profile');
-				}
-				else {				
-				res.render('./users/login.ejs', {
-						errors: {password: {msg: 'Las credenciales son inválidas - Password Incorrecto'},},
-						oldData: req.body
-						});
-				};
-			
-				}else{
-				return res.render('./users/login.ejs', {
-					errors: {email: { msg: 'No se encuentra este email en nuestra base de datos'}},
-					oldData: req.body
-					});
-				}
-				})
-				.catch(error => res.send(error))
-	}, */
 
 	 
 	logout: (req, res) => {
