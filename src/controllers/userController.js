@@ -112,7 +112,10 @@ const userController = {
 		res.cookie('userCookie', null, { maxAge: 1 });
 						
 			return res.redirect('../../index');
-		}
+		},
+
+		productCar: (req, res) => {
+			res.render('./users/productCar.ejs' )},	
 	
     
 }

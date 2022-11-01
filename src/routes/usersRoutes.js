@@ -35,6 +35,8 @@ router.get('/profile', authMiddleware, userController.profile);
 
 router.get('/logout', userController.logout);
 
+router.get('/productCar',userController.productCar);
+
 
 module.exports = router;
 
