@@ -291,21 +291,6 @@ main h3{
     background: rgba(0,0,0,0.3);
 }
 
-.info{
-    z-index: 1;
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-}
-
-.info p{
-    color: rgb(197, 204, 134);
-    font-weight: bold;
-    font-size: 25px;
-    position: absolute;
-    
-}
-
 .nuevos-ingresos, .destacados{
     margin: 10px;
     padding: 10px;
@@ -877,7 +862,7 @@ footer div ul li{
 /*****Validaciones Front-end*******/
 
 .is-valid{
-    background-color: rgb(163, 234, 130);
+    background-color: rgb(191, 197, 187);
 }
 
 .is-invalid{

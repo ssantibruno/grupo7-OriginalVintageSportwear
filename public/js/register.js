@@ -20,6 +20,10 @@ window.addEventListener("load", () => {
         errors.push("El campo Nombre no puede estar vacío");
         firstName.classList.remove("is-valid");
         firstName.classList.add("is-invalid");
+     }else if(firstName.value.length < 2) {
+        errors.push("El campo Nombre debe tener al menos 2 caracteres");
+        firstName.classList.remove("is-valid");
+        firstName.classList.add("is-invalid");
      }else {
         firstName.classList.add("is-valid");
         firstName.classList.remove("is-invalid");
@@ -31,11 +35,15 @@ window.addEventListener("load", () => {
       errors.push("El campo Apellido no puede estar vacío");
       lastName.classList.remove("is-valid");
       lastName.classList.add("is-invalid");
-   }else {
+     }else if(lastName.value.length < 2) {
+      errors.push("El campo Apellido debe tener al menos 2 caracteres");
+      lastName.classList.remove("is-valid");
+      lastName.classList.add("is-invalid");
+     }else {
       lastName.classList.add("is-valid");
       lastName.classList.remove("is-invalid");
       formRegistro.email.focus()
-   }
+     }
 
     //-------Email-----------
     let regEmail = /\S+@\S+\.+\S+/;

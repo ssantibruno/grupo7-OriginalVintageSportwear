@@ -13,12 +13,14 @@
       <form action="/users/login" method="POST" class="create-form">
         <div class="form-bienvenido">
             <p>¡Bienvenidos!</p>
+            <ul class="erroresLogin"></ul>
         </div>
         <div class="items-form">
             <label>Email:</label>
             <input 
                 type="email" 
                 name="email" 
+                id="emailLogin"
                 placeholder="xxxxx@mail.com" 
                 class="input"
                 value="<%= locals.oldData ? oldData.email : null %>">
@@ -33,6 +35,7 @@
             <input 
                 type="password" 
                 name="password" 
+                id="passwordLogin"
                 placeholder="Contraseña" 
                 class="input"
                 >
@@ -54,14 +57,10 @@
         <div class="usuario-nuevo">
             <a href="/users/register">No estoy registrado aún</a>
         </div>
-
-  
-
-
     </main>
 
         <%- include ('../partials/footer') %>
-
+    <script src="/js/login.js"></script>
 </body>
 
 </html>
