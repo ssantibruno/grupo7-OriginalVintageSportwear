@@ -873,3 +873,22 @@ footer div ul li{
     padding: 5px;
     border-radius: 10px;
 }
+
+/*****Validaciones Front-end*******/
+
+.is-valid{
+    background-color: rgb(163, 234, 130);
+}
+
+.is-invalid{
+    background-color: rgb(189, 98, 98);
+}
+
+.alert-warning{
+    color: red;
+    background-color: black;
+    text-align: center;
+    border-radius: 10px;
+}
+
+

@@ -8,14 +8,17 @@
         <%- include ('../partials/header') %>
     
     <main>
+        
         <form action="/users/register" method="POST" class="form-registro" enctype="multipart/form-data">
             <div>
                 <h2>Crea tu cuenta</h2>
+                <ul class="errores"></ul>
             </div>
             <div class="control-registro">
                 <input 
                     type="text" 
                     name="firstName" 
+                    id="firstName" 
                     placeholder="Nombre"
                     value="<%= locals.oldData ? oldData.firstName : null %>">
                     <% if (locals.errors && errors.firstName) { %>
@@ -28,6 +31,7 @@
                 <input 
                     type="text" 
                     name="lastName" 
+                    id="lastName" 
                     placeholder="apellido"
                     value="<%= locals.oldData ? oldData.lastName : null %>">
                     <% if (locals.errors && errors.lastName) { %>
@@ -40,6 +44,7 @@
                 <input 
                     type="email" 
                     name="email" 
+                    id="email"
                     placeholder="E-mail"
                     value="<%= locals.oldData ? oldData.email : null %>">
                     <% if (locals.errors && errors.email) { %>
@@ -63,12 +68,13 @@
             </div>
             <div class="control-registro">
                 <label for="img" class="form-label"> <b>Foto:</b></label>
-                <input type="file" accept="image/png, image/jpg, image/jpeg" name="image" class="product_imageFile">
+                <input type="file" accept="image/png, image/jpg, image/jpeg" name="image" id="image" class="product_imageFile">
             </div>
             <div class="contraseña">
                 <input 
                     type="password" 
                     name="password" 
+                    id="password"
                     placeholder="Contraseña">
                     <% if (locals.errors && errors.password) { %>
                         <div class="text-danger">
@@ -76,12 +82,6 @@
                         </div>
                     <% } %>
             </div>
-            <div class="contraseña">
-                <input 
-                    type="password" 
-                    name="pass_confirm" 
-                    placeholder="Confirmá tu contraseña">
-            </div> 
             <div>
                 <h4>Quieres recibir ofertas a tu correo?</h4>
             </div>   
@@ -107,7 +107,7 @@
     </main>
 
     <%- include ('../partials/footer') %>
-
+    <script src="/js/index.js"></script>
 
 </body>
 
