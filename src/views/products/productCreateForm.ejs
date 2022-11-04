@@ -18,7 +18,7 @@
                 </div>
                 <div class="control-registro-name">
                     <label for="name" class="form-label">Nombre del producto:</label>
-                    <input type="text" name="product_name" id="productName" placeholder="Añadir Nombre de Producto">
+                    <input type="text" name="product_name" id="productName" placeholder="Nombre de Producto">
                 </div>
                 <div class="control-registro-description">
                     <label for="description" class="form-label">Descripción del producto:</label>
@@ -28,7 +28,7 @@
                     <div class="control-registro">
                         <label for="category" class="form-label">Categoria del producto:</label>
                         <div class="seleccion-status">
-                            <select name="category_id" id="" required>
+                            <select name="category_id" id="productCategory">
                                 <option value="" disabled selected>- Seleccione una categoria - </option>
                                 <% categorias.forEach(category => { %>
                                 <option value="<%= category.id %>"><%= category.category_name %></option>
@@ -39,7 +39,7 @@
                     <div class="control-registro">
                         <label for="status" class="form-label">Condición de venta:</label>
                         <div class="seleccion-status">
-                            <select name="type">
+                            <select name="type" id="productConditionSell">
                                 <option value="" disabled selected>..</option>
                                 <option value="Oferta">Oferta</option>
                                 <option value="Destacado">Destacado</option>
@@ -50,7 +50,7 @@
                 <div class="caja-ingreso">
                     <div class="control-registro">
                         <label for="size" class="form-label">Talle del producto:</label>
-                        <select name="size">
+                        <select name="size" id="productSize">
                             <option value="" disabled selected>..</option>
                             <option value="S">S</option>
                             <option value="M">M</option>
@@ -61,7 +61,7 @@
                     <div class="control-registro">
                         <label for="status" class="form-label">Status del producto:</label>
                         <div class="seleccion-status">
-                            <select name="status" >
+                            <select name="status" id="productStatus">
                                 <option value="" disabled selected>..</option>
                                 <option value="Disponible">Disponible</option>
                                 <option value="Agotado">Agotado</option>
@@ -73,22 +73,22 @@
                     <div class="control-registro">
                         <label for="status" class="form-label">Condición del producto:</label>
                         <div class="seleccion-status">
-                            <select name="condition">
+                            <select name="condition" id="productCondition">
                                 <option value="" disabled selected>..</option>
                                 <option value="Nuevo">Nuevo</option>
                                 <option value="Usado">Usado</option>
                             </select>
                         </div>
                     </div>
-                    <div class="control-registro">
+                    <div class="control-registro" >
                         <label for="price" class="form-label">Precio del producto:</label>
-                        <input type="text" name="price" placeholder="Añadir Precio de Producto">
+                        <input type="text" name="price" id="productPrice" placeholder="Añadir Precio de Producto">
                     </div>
                 </div>
 
-                <div class="control-registro">
+                <div class="control-registro" >
                     <label for="img" class="form-label">Imagen del producto:</label>
-                    <input type="file" accept="image/png, image/jpg, image/jpeg" name="image" id="imageProduct" class="product_imageFile">
+                    <input type="file" accept="image/png, image/jpg, image/jpeg" name="image" id="productImage" class="product_imageFile">
                 </div>
 
                 <div class="caja-boton-anadir">

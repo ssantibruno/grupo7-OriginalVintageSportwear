@@ -10,8 +10,14 @@ window.addEventListener("load", () => {
      let errors =[];
      
      let productName = document.querySelector("#productName");
-     let productDescrption = document.querySelector("#productDescription");
-     let imageProduct = document.querySelector("#imageProduct");
+     let productDescription = document.querySelector("#productDescription");
+     let productCategory = document.querySelector("#productCategory");
+     let productConditionSell = document.querySelector("#productConditionSell");
+     let productSize = document.querySelector("#productSize");
+     let productStatus = document.querySelector("#productStatus");
+     let productCondition = document.querySelector("#productCondition");
+     let productPrice = document.querySelector("#productPrice");
+     let productImage = document.querySelector("#productImage");
 
      //-------productName-----------
      if(productName.value == ""){
@@ -25,23 +31,100 @@ window.addEventListener("load", () => {
      }else {
         productName.classList.add("is-valid");
         productName.classList.remove("is-invalid");
-        formCreate.productDescrption.focus(   )
+        formCreate.productDescription.focus()
      }
 
      //-------productDescription-----------
-     if(productDescrption.value == ""){
+     if(productDescription.value == ""){
       errors.push("El campo Descripción no puede estar vacío");
-      productDescrption.classList.remove("is-valid");
-      productDescrption.classList.add("is-invalid");
-     }else if(productDescrption.value.length < 20) {
+      productDescription.classList.remove("is-valid");
+      productDescription.classList.add("is-invalid");
+     }else if(productDescription.value.length < 20) {
       errors.push("El campo Descripción debe tener al menos 20 caracteres");
-      productDescrption.classList.remove("is-valid");
-      productDescrption.classList.add("is-invalid");
+      productDescription.classList.remove("is-valid");
+      productDescription.classList.add("is-invalid");
      }else {
-      productDescrption.classList.add("is-valid");
-      productDescrption.classList.remove("is-invalid");
+      productDescription.classList.add("is-valid");
+      productDescription.classList.remove("is-invalid");
+      formCreate.productCategory.focus()
      }
 
+     //-------productCategory-----------
+     if(productCategory.value == ""){
+        errors.push("El campo Categoría no puede estar vacío");
+        productCategory.classList.remove("is-valid");
+        productCategory.classList.add("is-invalid");
+       }else {
+        productCategory.classList.add("is-valid");
+        productCategory.classList.remove("is-invalid");
+        formCreate.productCondition.focus()
+       }   
+
+       //-------productConditionSell-----------
+       if(productConditionSell.value == ""){
+        errors.push("El campo Condición de Venta no puede estar vacío");
+        productConditionSell.classList.remove("is-valid");
+        productConditionSell.classList.add("is-invalid");
+       }else {
+        productConditionSell.classList.add("is-valid");
+        productConditionSell.classList.remove("is-invalid");
+        formCreate.productSize.focus()
+       }   
+
+        //-------productSize-----------
+        if(productSize.value == ""){
+            errors.push("El campo Talle del Producto no puede estar vacío");
+            productSize.classList.remove("is-valid");
+            productSize.classList.add("is-invalid");
+           }else {
+            productSize.classList.add("is-valid");
+            productSize.classList.remove("is-invalid");
+            formCreate.productStatus.focus()
+           }      
+
+               //-------productStatus-----------
+          if(productStatus.value == ""){
+            errors.push("El campo Estado del Producto no puede estar vacío");
+            productStatus.classList.remove("is-valid");
+            productStatus.classList.add("is-invalid");
+           }else {
+            productStatus.classList.add("is-valid");
+            productStatus.classList.remove("is-invalid");
+            formCreate.productCondition.focus()}
+
+              //-------productCondition-----------
+          if(productCondition.value == ""){
+            errors.push("El campo Condición del Producto no puede estar vacío");
+            productCondition.classList.remove("is-valid");
+            productCondition.classList.add("is-invalid");
+           }else {
+            productCondition.classList.add("is-valid");
+            productCondition.classList.remove("is-invalid");
+            formCreate.productPrice.focus()
+           }
+
+             //-------productPrice-----------
+          if(productPrice.value == ""){
+            errors.push("El campo Precio del Producto no puede estar vacío");
+            productPrice.classList.remove("is-valid");
+            productPrice.classList.add("is-invalid");
+           }else {
+            productPrice.classList.add("is-valid");
+            productPrice.classList.remove("is-invalid");
+            formCreate.productImage.focus()
+           } 
+
+            //-------productImage-----------
+          if(productImage.value == ""){
+            errors.push("El campo Imagen del Producto no puede estar vacío");
+            productImage.classList.remove("is-valid");
+            productImage.classList.add("is-invalid");
+           }else {
+            productImage.classList.add("is-valid");
+            productImage.classList.remove("is-invalid");
+           } 
+
+            
    //------Controlamos si hay errores------
 
    console.log(errors);
