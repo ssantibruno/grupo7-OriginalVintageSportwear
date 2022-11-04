@@ -882,3 +882,13 @@ footer div ul li{
     text-align: center;
     border-radius: 10px;
 }
+
+/*****Validaciones Front-end*******/
+
+.is-valid{
+    background-color: rgb(191, 197, 187);
+}
+
+.is-invalid{
+    background-color: rgb(189, 98, 98);
+}
