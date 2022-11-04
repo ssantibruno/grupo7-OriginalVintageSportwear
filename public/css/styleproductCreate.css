@@ -6,20 +6,21 @@
 }
 
 .divCreateProduct {
-    width: 60%;
+    width: 80%;
     background-color: #666;
     padding: 15px;
     margin: 40px auto;
     border: solid 2px rgb(58, 58, 160);
     display: flex;
     flex-direction: column;
+    font-size: 20px;
     }
 .createProductTitle{
     text-align: center;
-    padding: 10px;
+    padding: 15px;
 }
 .control-registro-name, .control-registro-description{
-    padding: 10px;
+    padding: 15px;
 }
 
 .caja-ingreso{
@@ -29,11 +30,11 @@
 
 .control-registro{
     display: flex;
-    padding: 10px;
+    padding: 15px;
 }
 
 .form-registro{
-    padding: 20px;
+    padding: 15px;
     text-align: center;
 }
 
@@ -43,9 +44,12 @@
     justify-content: center;
 }
 .addProductButton{
-    border-radius: 30%;
-    padding: 10px;
+    border-radius: 10%;
+    padding: 15px;
     border: 1px solid black;
+    background-color: black;
+    color: white;
+    font-size: 20px;
 }
 
 

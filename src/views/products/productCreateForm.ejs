@@ -14,14 +14,15 @@
             <div class="divCreateProduct">
                 <div>
                     <h2 class="createProductTitle">Añadir Producto</h2>
+                    <ul class="errores"></ul>
                 </div>
                 <div class="control-registro-name">
                     <label for="name" class="form-label">Nombre del producto:</label>
-                    <input type="text" name="product_name" placeholder="Añadir Nombre de Producto">
+                    <input type="text" name="product_name" id="productName" placeholder="Añadir Nombre de Producto">
                 </div>
                 <div class="control-registro-description">
                     <label for="description" class="form-label">Descripción del producto:</label>
-                    <input type="text" name="description" placeholder="Descripción de Producto">
+                    <input type="text" name="description" id="productDescription" placeholder="Descripción de Producto">
                 </div>
                 <div class="caja-ingreso">
                     <div class="control-registro">
@@ -87,23 +88,17 @@
 
                 <div class="control-registro">
                     <label for="img" class="form-label">Imagen del producto:</label>
-                    <input type="file" accept="image/png, image/jpg, image/jpeg" name="image" class="product_imageFile">
+                    <input type="file" accept="image/png, image/jpg, image/jpeg" name="image" id="imageProduct" class="product_imageFile">
                 </div>
 
                 <div class="caja-boton-anadir">
-                    <button type="submit" class="addProductButton">Añadir producto</button>
+                    <button type="submit" class="addProductButton">Agregar producto</button>
                 </div>
-            </div>
-            
-
-            
-            
+            </div>        
         </form>
        </div>
-
-
     </main>
-
- </body>
+    <script src="/js/productsCreate.js"></script>
+</body>
 
 </html>

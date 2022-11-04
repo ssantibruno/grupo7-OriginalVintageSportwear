@@ -46,10 +46,10 @@ header{
 }
 
 .titulo{
-    color: rgb(202, 200, 80);
+    color: rgb(249, 245, 8);
     font-weight: bold;
     font-size: 30px;
-    text-align: left;
+    text-align: justify;
     font-family: 'Kdam Thmor Pro', sans-serif;
     width: 15%;
     
@@ -120,7 +120,7 @@ header{
 .register, .login, .carrito{
    align-items: center;
    justify-content: center;
-   color: rgb(202, 200, 80);
+   color:  rgb(249, 245, 8);
    font-size: 20px;
    text-align: center;
 }
@@ -133,7 +133,7 @@ header{
 
 
 .nav-bar div a{
-    color: rgb(202, 200, 80);
+    color: rgb(249, 245, 8);
     font-size: 15px;
     text-decoration: none;
 }
@@ -159,7 +159,7 @@ header{
     align-items: center;
     width: 100%;
     padding: 5px 0px;
-    border-top: rgb(202, 200, 80) 1px solid;
+    border-top: rgb(249, 245, 8) 1px solid;
 }
 
 .nav-bar-tipos ul {
@@ -189,7 +189,7 @@ header{
     justify-content: center;
     align-items: center;
     text-align: center;
-    color:rgb(202, 200, 80);
+    color:rgb(249, 245, 8);
     text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -214,7 +214,7 @@ header{
 
 .burger-menu i{
     background-color:black;
-    color: rgb(202, 200, 80);
+    color: rgb(249, 245, 8);
     font-size: 30px;
     margin: 10px 0px 10px 0px;
     padding:10px;
@@ -294,7 +294,7 @@ main h3{
 .nuevos-ingresos, .destacados{
     margin: 10px;
     padding: 10px;
-     }
+}
 
 h3 {
     border-bottom: 2px solid black;
@@ -312,9 +312,11 @@ section .articulos-nuevos, .articulos-destacados{
     background-color: white;
     margin-top: 5px;
     margin-bottom: 15px;
-    border: solid 1px #3b3939 ;
-    box-shadow: 2px 2px 5px black;
+    border: solid 4px #3b3939 ;
+    box-shadow: 6px 6px 10px black;
     height: 370px;
+    border-radius: 25px;
+    padding: 15px;
 }
 
 .cajaImagenArticulo{
