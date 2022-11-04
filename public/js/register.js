@@ -12,9 +12,9 @@ window.addEventListener("load", () => {
      let firstName = document.querySelector("#firstName");
      let lastName = document.querySelector("#lastName");
      let email = document.querySelector("#email");
-     let password = document.querySelector("#password");
      let image = document.querySelector("#image");
-
+     let password = document.querySelector("#password");
+    
      //-------firstName-----------
      if(firstName.value == ""){
         errors.push("El campo Nombre no puede estar vacío");
@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
      }else {
         firstName.classList.add("is-valid");
         firstName.classList.remove("is-invalid");
-        formRegistro.lastName.focus(   )
+        formRegistro.lastName.focus()
      }
 
      //-------lastName-----------
@@ -69,6 +69,8 @@ window.addEventListener("load", () => {
       password.classList.add("is-valid");
       password.classList.remove("is-invalid");
    }
+ 
+
 
    //------Controlamos si hay errores------
 
