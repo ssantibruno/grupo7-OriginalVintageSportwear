@@ -43,9 +43,12 @@
     justify-content: center;
 }
 .addProductButton{
-    border-radius: 30%;
+    border-radius: 10%;
     padding: 10px;
     border: 1px solid black;
+    background-color: black;
+    color: white;
+    font-size: 20px;
 }
 
 
