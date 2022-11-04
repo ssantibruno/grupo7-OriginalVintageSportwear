@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
 
     //-------Email-----------
     let regEmail = /\S+@\S+\.+\S+/;
-    if(!regEmail.test(email.value)){          //.test "testea que ese email contenga @ y ."
+    if(!regEmail.test(email.value)){          //-test "testea que ese email contenga @ y ."
       errors.push("Debe ingresar un email válido");
       email.classList.add("is-invalid");
       email.classList.remove("is-valid");     

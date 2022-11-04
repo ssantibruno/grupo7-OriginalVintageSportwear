@@ -31,7 +31,7 @@
                     <div class="control-registro">
                         <label for="category" class="form-label">Categoria del producto:</label>
                         <div class="seleccion-status">
-                            <select name="category_id" id="productCategory" >
+                            <select name="category_id" id="productCategory" required>
                                 <option value="" disabled selected>- Seleccione una categoria - </option>
                                 <% categorias.forEach(category => { %>
                                 <option value="<%= category.id %>"><%= category.category_name %></option>

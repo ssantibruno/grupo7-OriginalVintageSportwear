@@ -14,13 +14,14 @@
         <div class="form-bienvenido">
             <p>¡Bienvenidos!</p>
         </div>
-        <ul class="errores">
-        </ul>
+        <ul class="erroresLogin"></ul>
+    
         <div class="items-form">
             <label>Email:</label>
             <input 
                 type="email" 
                 name="email" 
+                id="emailLogin"
                 placeholder="xxxxx@mail.com" 
                 class="input"
                 value="<%= locals.oldData ? oldData.email : null %>">
@@ -35,6 +36,7 @@
             <input 
                 type="password" 
                 name="password" 
+                id="passwordLogin"
                 placeholder="Contraseña" 
                 class="input"
                 >
