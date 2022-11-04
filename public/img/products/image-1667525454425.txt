@@ -1,0 +1,12 @@
+En listado de productos al final agregar boton de "agregar producto" y enlace.
+
+profile agregar boton y enlace de Listado de Usuario
+
+-------------------------------------------------------------------------------
+
+CRUD
+
+
+
+
+
