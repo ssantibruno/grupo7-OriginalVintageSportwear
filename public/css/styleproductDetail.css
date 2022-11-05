@@ -115,7 +115,15 @@
     display: flex;
 }
 
-.boton-editar, .boton-borrar{
+.boton-editar a {
+    padding: 5px;
+    border-radius: 20%;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(110, 163, 247);
+}
+
+.boton-borrar{
     padding: 5px;
     border-radius: 20%;
     border: 1px solid white;
