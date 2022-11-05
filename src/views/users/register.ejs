@@ -32,7 +32,7 @@
                     type="text" 
                     name="lastName" 
                     id="lastName" 
-                    placeholder="apellido"
+                    placeholder="Apellido"
                     value="<%= locals.oldData ? oldData.lastName : null %>">
                     <% if (locals.errors && errors.lastName) { %>
                         <div class="text-danger">
@@ -54,17 +54,17 @@
                     <% } %>
             </div>
             <div class="control-registro">
-                <input type="text" name="address" placeholder="Domicilio">
+                <input type="text" name="address" placeholder="Domicilio" id="address">
             </div>
             <div class="control-registro">
-                <input type="text" name="residencia" placeholder="pais">
+                <input type="text" name="residencia" placeholder="Nacionalidad" id="nationality">
             </div>
             <div>
                 <label for="birth_date"><b>Fecha de nacimiento</b></label>
                 <input type="date" name="birth_date" id="birth_date">
             </div>
             <div class="control-registro">
-                <input type="text" name="intereses" placeholder="club favorito">
+                <input type="text" name="intereses" placeholder="Club favorito">
             </div>
             <div class="control-registro">
                 <label for="img" class="form-label"> <b>Foto:</b></label>

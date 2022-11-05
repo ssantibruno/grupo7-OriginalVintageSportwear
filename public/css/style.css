@@ -872,11 +872,11 @@ footer div ul li{
 /*****Validaciones Front-end*******/
 
 .is-valid{
-    background-color: rgb(191, 197, 187);
+    background-color: rgb(112, 187, 128);
 }
 
 .is-invalid{
-    background-color: rgb(184, 182, 182);
+    background-color: rgb(185, 146, 146);
 }
 
 .alert-warning{
