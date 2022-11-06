@@ -21,6 +21,9 @@ const productsController = {
             res.render('./products/productList.ejs', {products} )},
             )},
 
+    nosotros: (req, res) => {    
+                    res.render('./products/nosotros.ejs')}, 
+
     selecciones: (req,res) => {
         db.Product.findAll({
                     where: { category_id: 1},

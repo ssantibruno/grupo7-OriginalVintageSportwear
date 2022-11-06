@@ -14,6 +14,7 @@ const storage=multer.diskStorage({
 const uploadFileProducts = multer ({storage});
 
 router.get('/list',productsController.productsList);
+router.get('/nosotros',productsController.nosotros);
 router.get('/selecciones',productsController.selecciones);
 router.get('/restoDelMundo',productsController.restoDelMundo);
 router.get('/equiposAmericanos',productsController.equiposAmericanos);
