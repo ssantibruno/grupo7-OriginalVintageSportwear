@@ -23,6 +23,12 @@ const mainController = {
             .then(([allDestacados, allOfertas]) => {
                 res.render('index',{allDestacados, allOfertas})})
         },
+
+    nosotros: (req, res) => {
+			res.render('nosotros' )},	
+	
+
+    
     
 }
  

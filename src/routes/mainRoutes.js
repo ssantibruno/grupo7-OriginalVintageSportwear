@@ -12,6 +12,7 @@ const userController= require("../controllers/userController.js");
 
 router.get('/',mainController.index);
 router.get('/index',mainController.index);
+router.get('/nosotros',mainController.nosotros);
 
 
 
